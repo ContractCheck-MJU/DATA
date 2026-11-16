@@ -1,0 +1,4 @@
+# Dependencies may be installed before review; weights load only after preflight.
+# PyTorch uses OS/GPU-specific packages; for NVIDIA prefer official PyTorch install guidance.
+torch>=2.3
+transformers>=4.45,<5
