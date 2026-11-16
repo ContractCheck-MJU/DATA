@@ -1,0 +1,857 @@
+[
+  {
+    "document_key": "LAW_HOUSING_2",
+    "title": "주택임대차보호법 제2조(적용 범위)",
+    "source_characters": 129,
+    "source_text_sha256": "ef704011a2ce9807f3e48361da697634f60f82b3d68c0c09c60ad7337b06ad5c",
+    "chunks": 1,
+    "whole_article_tokens": 100,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_3",
+    "title": "주택임대차보호법 제3조(대항력 등)",
+    "source_characters": 809,
+    "source_text_sha256": "3e3560be29489380be7b5a8262c6c9726ef53581fbdc96234d0c9f3fc7b64058",
+    "chunks": 1,
+    "whole_article_tokens": 485,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_3_2",
+    "title": "주택임대차보호법 제3조의2(보증금의 회수)",
+    "source_characters": 1702,
+    "source_text_sha256": "f1e68ed953a67691b6981d74e00febdbd3fdf49bd7f8f5abe06e19ecdd19146e",
+    "chunks": 9,
+    "whole_article_tokens": 1022,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_3_3",
+    "title": "주택임대차보호법 제3조의3(임차권등기명령)",
+    "source_characters": 1448,
+    "source_text_sha256": "e7e97ffb93b3193d8b1b0a2d2bd8733037c5c2190870d091d659543655861a34",
+    "chunks": 9,
+    "whole_article_tokens": 909,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_3_7",
+    "title": "주택임대차보호법 제3조의7(임대인의 정보 제시 의무)",
+    "source_characters": 365,
+    "source_text_sha256": "0699c75672ddccdefa941725f3ceab6628e51f1d9f0c647f01343066b2b3811b",
+    "chunks": 1,
+    "whole_article_tokens": 253,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_4",
+    "title": "주택임대차보호법 제4조(임대차기간 등)",
+    "source_characters": 177,
+    "source_text_sha256": "31f74d9db9b35cd27241201ddf25697f7bbf522d01ce5ed8d308a9ea08f1e669",
+    "chunks": 1,
+    "whole_article_tokens": 129,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_6",
+    "title": "주택임대차보호법 제6조(계약의 갱신)",
+    "source_characters": 384,
+    "source_text_sha256": "f4a367caaf59f45b78f49ed07b361da8a1f4d5aed1d200cbc0b59b6cb20d3b4e",
+    "chunks": 1,
+    "whole_article_tokens": 245,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_6_2",
+    "title": "주택임대차보호법 제6조의2(묵시적 갱신의 경우 계약의 해지)",
+    "source_characters": 194,
+    "source_text_sha256": "c7b4a9e719215d120969609e8f3f9ee1fa0d816ef625a0eab08395b3282c99bb",
+    "chunks": 1,
+    "whole_article_tokens": 149,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_6_3",
+    "title": "주택임대차보호법 제6조의3(계약갱신 요구 등)",
+    "source_characters": 1420,
+    "source_text_sha256": "63b9492f0952cf433f154b68fcde7c8a1d179a68d0205e5f32689a589d81ca7c",
+    "chunks": 6,
+    "whole_article_tokens": 826,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_7",
+    "title": "주택임대차보호법 제7조(차임 등의 증감청구권)",
+    "source_characters": 388,
+    "source_text_sha256": "011af18d47435a95cd2eecc2f60fe957b4793220cdc9aa14294b146f1d2c1a1c",
+    "chunks": 1,
+    "whole_article_tokens": 259,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_7_2",
+    "title": "주택임대차보호법 제7조의2(월차임 전환 시 산정률의 제한)",
+    "source_characters": 287,
+    "source_text_sha256": "5790a195c7fcb44ddfea5509731697e47d8f3f7d45ab4465be019fc167cfca72",
+    "chunks": 1,
+    "whole_article_tokens": 180,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_8",
+    "title": "주택임대차보호법 제8조(보증금 중 일정액의 보호)",
+    "source_characters": 343,
+    "source_text_sha256": "eb7375314e55796786d46b330877d76f3cade2c36f90b96b6f866360d6961677",
+    "chunks": 1,
+    "whole_article_tokens": 240,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_10",
+    "title": "주택임대차보호법 제10조(강행규정)",
+    "source_characters": 73,
+    "source_text_sha256": "777a39b1d34108c170f6a2b7c7951bdc68e115da8e33d8dcbf7e504fea4f328f",
+    "chunks": 1,
+    "whole_article_tokens": 71,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_10_2",
+    "title": "주택임대차보호법 제10조의2(초과 차임 등의 반환청구)",
+    "source_characters": 157,
+    "source_text_sha256": "207b29f29350470fda0213bf37ca9d19993c647a5d7eba913bcd918c4dd22234",
+    "chunks": 1,
+    "whole_article_tokens": 128,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_11",
+    "title": "주택임대차보호법 제11조(일시사용을 위한 임대차)",
+    "source_characters": 80,
+    "source_text_sha256": "26c9a9aff11114c98e43e4133e843f88eeb50616dfa8e70b4b4f60cf48013e81",
+    "chunks": 1,
+    "whole_article_tokens": 75,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_30",
+    "title": "주택임대차보호법 제30조(주택임대차표준계약서 사용)",
+    "source_characters": 171,
+    "source_text_sha256": "06f6621da5decc0d26669de4f917da8abbda4831afe7bc946febf812a09b7e05",
+    "chunks": 1,
+    "whole_article_tokens": 126,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_105",
+    "title": "민법 제105조(임의규정)",
+    "source_characters": 79,
+    "source_text_sha256": "8c1a993e98d8ca3ebba72b939ca3bc030813cde9d3968e4c90442af393355dfb",
+    "chunks": 1,
+    "whole_article_tokens": 69,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_398",
+    "title": "민법 제398조(배상액의 예정)",
+    "source_characters": 221,
+    "source_text_sha256": "e33ed09f3cd7462332c2cf034c4f98584513fd98a5010e88a02fe8a898c83871",
+    "chunks": 1,
+    "whole_article_tokens": 162,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_536",
+    "title": "민법 제536조(동시이행의 항변권)",
+    "source_characters": 184,
+    "source_text_sha256": "19bafa163a73193ad385edee0c4a0dfe026f0d853d761a765e0fca941b500643",
+    "chunks": 1,
+    "whole_article_tokens": 140,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_615",
+    "title": "민법 제615조(차주의 원상회복의무와 철거권)",
+    "source_characters": 79,
+    "source_text_sha256": "60799ccbb33a43c65082010e87b2edfad4b07d3f40ada5bd1a55a1593eb0373e",
+    "chunks": 1,
+    "whole_article_tokens": 81,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_623",
+    "title": "민법 제623조(임대인의 의무)",
+    "source_characters": 76,
+    "source_text_sha256": "d53633aafa631d5b1fa9cf28e8cac6e9424a7b68120626c5f1654fe5e58979d4",
+    "chunks": 1,
+    "whole_article_tokens": 65,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_626",
+    "title": "민법 제626조(임차인의 상환청구권)",
+    "source_characters": 202,
+    "source_text_sha256": "f52f3594828b9a2439afd3b210bac442a7b3140ecb09a1c1de52e0e03a5ab5ff",
+    "chunks": 1,
+    "whole_article_tokens": 152,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_627",
+    "title": "민법 제627조(일부멸실 등과 감액청구, 해지권)",
+    "source_characters": 170,
+    "source_text_sha256": "34f14eb02307a47adedb53ebf29542a1f1b593d6a111cae6fc0cbfa172bdec45",
+    "chunks": 1,
+    "whole_article_tokens": 138,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_629",
+    "title": "민법 제629조(임차권의 양도, 전대의 제한)",
+    "source_characters": 107,
+    "source_text_sha256": "20d0cd3c81c35c384d0003a9aeb0bc3cb1351e6b1a322b3c48c476ecfc62ebce",
+    "chunks": 1,
+    "whole_article_tokens": 94,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_634",
+    "title": "민법 제634조(임차인의 통지의무)",
+    "source_characters": 119,
+    "source_text_sha256": "4a564c0b1d34fa87349f3197d8aad11dff4cef43917be7c72137d9aba894f7d3",
+    "chunks": 1,
+    "whole_article_tokens": 90,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_640",
+    "title": "민법 제640조(차임연체와 해지)",
+    "source_characters": 80,
+    "source_text_sha256": "4729629d3ad0fab5a386ea0a1c333b5e9e4384d76ca76ee351a6d27d7b85aca1",
+    "chunks": 1,
+    "whole_article_tokens": 78,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_652",
+    "title": "민법 제652조(강행규정)",
+    "source_characters": 119,
+    "source_text_sha256": "56ca8b02422cbb462289db61698e5e4bd5bd67395200f4af4b445781a4d7535c",
+    "chunks": 1,
+    "whole_article_tokens": 98,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_654",
+    "title": "민법 제654조(준용규정)",
+    "source_characters": 55,
+    "source_text_sha256": "7e0a0728ce060d76fc875006002c564661e525bb18649e3502382da1758f33e0",
+    "chunks": 1,
+    "whole_article_tokens": 64,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_2",
+    "title": "약관의 규제에 관한 법률 제2조(정의)",
+    "source_characters": 279,
+    "source_text_sha256": "99e1523c6f0a62844e3f6219006b1036baa3feda5f50ab692fdaf5979032a14f",
+    "chunks": 1,
+    "whole_article_tokens": 162,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_3",
+    "title": "약관의 규제에 관한 법률 제3조(약관의 작성 및 설명의무 등)",
+    "source_characters": 590,
+    "source_text_sha256": "3a427be0f787b22ad7fc4d3546fcc8bb74680679fd8fc8b36264de80549e710d",
+    "chunks": 1,
+    "whole_article_tokens": 306,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_4",
+    "title": "약관의 규제에 관한 법률 제4조(개별 약정의 우선)",
+    "source_characters": 111,
+    "source_text_sha256": "ebb209bf8ced21d675661a2bbcace069fcf34d81acb0a6242db4817f5515dd6a",
+    "chunks": 1,
+    "whole_article_tokens": 83,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_5",
+    "title": "약관의 규제에 관한 법률 제5조(약관의 해석)",
+    "source_characters": 134,
+    "source_text_sha256": "a1087450b19acbf04fb23717f05c3fb307ff7b7753b8ed0c7ebbfde170ccae05",
+    "chunks": 1,
+    "whole_article_tokens": 91,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_6",
+    "title": "약관의 규제에 관한 법률 제6조(일반원칙)",
+    "source_characters": 249,
+    "source_text_sha256": "a8817d7a7e8cc04bc6d799b7ae88e0a079c65c101ae96d547906bfbbd31614fd",
+    "chunks": 1,
+    "whole_article_tokens": 151,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_7",
+    "title": "약관의 규제에 관한 법률 제7조(면책조항의 금지)",
+    "source_characters": 391,
+    "source_text_sha256": "8514ce4c5799497322fc762148ae5144ef143d1b9f66049f55f1bad0823d9c43",
+    "chunks": 1,
+    "whole_article_tokens": 224,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_8",
+    "title": "약관의 규제에 관한 법률 제8조(손해배상액의 예정)",
+    "source_characters": 89,
+    "source_text_sha256": "990e2acef59723fe28618e7ee63112d4adddb82df87f5378b8a5b0065b26f6e7",
+    "chunks": 1,
+    "whole_article_tokens": 81,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_9",
+    "title": "약관의 규제에 관한 법률 제9조(계약의 해제ㆍ해지)",
+    "source_characters": 552,
+    "source_text_sha256": "eec99ee907ef5bcd30e5d66e83cc672c11124e7b647ff94625c571599b9fd6c3",
+    "chunks": 1,
+    "whole_article_tokens": 317,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_10",
+    "title": "약관의 규제에 관한 법률 제10조(채무의 이행)",
+    "source_characters": 240,
+    "source_text_sha256": "dab8f159a49a8c5e8f5231f280d084491c95b5195964dd1176ba0b6b0f7c62cc",
+    "chunks": 1,
+    "whole_article_tokens": 144,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_11",
+    "title": "약관의 규제에 관한 법률 제11조(고객의 권익 보호)",
+    "source_characters": 301,
+    "source_text_sha256": "38d915f18e6f2347289b004eeaa7597809de86510b375fbb1080cac34289f56b",
+    "chunks": 1,
+    "whole_article_tokens": 180,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_12",
+    "title": "약관의 규제에 관한 법률 제12조(의사표시의 의제)",
+    "source_characters": 471,
+    "source_text_sha256": "965c4bc9980f42791ef188769a9548cfc3ab1e0b70f9fabfd3b018bdc3d6eb9f",
+    "chunks": 1,
+    "whole_article_tokens": 274,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_14",
+    "title": "약관의 규제에 관한 법률 제14조(소송 제기의 금지 등)",
+    "source_characters": 174,
+    "source_text_sha256": "c60a5d5d0fc16b897a8e840aa059689dd5a79586afbca6f87d5fbdd9c17d679b",
+    "chunks": 1,
+    "whole_article_tokens": 111,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_16",
+    "title": "약관의 규제에 관한 법률 제16조(일부 무효의 특칙)",
+    "source_characters": 217,
+    "source_text_sha256": "6dde757ac4d91a8e0b23602d3fe5865e65787cfab8439c05051e634774bb5f4f",
+    "chunks": 1,
+    "whole_article_tokens": 143,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TERMS_30",
+    "title": "약관의 규제에 관한 법률 제30조(적용 범위)",
+    "source_characters": 181,
+    "source_text_sha256": "f4af110b86ff7724bbf42f69541749c09b91430a923dfe3b49873f2ac6dbf61b",
+    "chunks": 1,
+    "whole_article_tokens": 121,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_2",
+    "title": "민법 제2조(신의성실)",
+    "source_characters": 61,
+    "source_text_sha256": "37ec4fc19ff464ef687825b6dc0b6ad9831040076503f21a9a7ad62ed1ccdfc8",
+    "chunks": 1,
+    "whole_article_tokens": 65,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_103",
+    "title": "민법 제103조(반사회질서의 법률행위)",
+    "source_characters": 64,
+    "source_text_sha256": "f1f1f2a7f68acc3dccbbcc03f3922a1fc1ce72792a0c1f9d1189cd8bde8665f0",
+    "chunks": 1,
+    "whole_article_tokens": 63,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_114",
+    "title": "민법 제114조(대리행위의 효력)",
+    "source_characters": 107,
+    "source_text_sha256": "c1735e99888aeb19d7b6837ff7228dceb60c774e21384731e915bb26a5ceb3b5",
+    "chunks": 1,
+    "whole_article_tokens": 84,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_118",
+    "title": "민법 제118조(대리권의 범위)",
+    "source_characters": 115,
+    "source_text_sha256": "44c4dd043ba8c3449fa1c22d3177d2b1ae9bd56c2ac523b1c6068a9d5449150f",
+    "chunks": 1,
+    "whole_article_tokens": 87,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_125",
+    "title": "민법 제125조(대리권수여의 표시에 의한 표현대리)",
+    "source_characters": 148,
+    "source_text_sha256": "56a86a6f62ce4ba0ef8bf5d5fe0d1e16cfb852850fd14528c4d96f376d57b541",
+    "chunks": 1,
+    "whole_article_tokens": 112,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_126",
+    "title": "민법 제126조(권한을 넘은 표현대리)",
+    "source_characters": 100,
+    "source_text_sha256": "9b365d849cb32195545fd40c3215871147fc3b1ae3fe3950968c0653dd5b0f46",
+    "chunks": 1,
+    "whole_article_tokens": 80,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_129",
+    "title": "민법 제129조(대리권소멸후의 표현대리)",
+    "source_characters": 92,
+    "source_text_sha256": "7d7eb3718256e708ece97557a9a741a89ffef2fdc2a188f704781eca313f5dc0",
+    "chunks": 1,
+    "whole_article_tokens": 80,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_130",
+    "title": "민법 제130조(무권대리)",
+    "source_characters": 69,
+    "source_text_sha256": "69e9b042cf6d15bb55ba89900cd33b28645b81437cc3a51e379f40bd4d1721b7",
+    "chunks": 1,
+    "whole_article_tokens": 61,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_135",
+    "title": "민법 제135조(상대방에 대한 무권대리인의 책임)",
+    "source_characters": 253,
+    "source_text_sha256": "a917af6f810c0d70eaa303839d27ca00f163f5286d80d5d86af4639db9b4cc9c",
+    "chunks": 1,
+    "whole_article_tokens": 165,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_137",
+    "title": "민법 제137조(법률행위의 일부무효)",
+    "source_characters": 111,
+    "source_text_sha256": "4b6e2c91433b21048a38eb5eb3357b3ed67bcb9671cbc0258471041911ad9586",
+    "chunks": 1,
+    "whole_article_tokens": 85,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_374",
+    "title": "민법 제374조(특정물인도채무자의 선관의무)",
+    "source_characters": 83,
+    "source_text_sha256": "9399b06cda0daf5aefb15fcadcdd335bed0c4bd5031269f603e619f3295fb859",
+    "chunks": 1,
+    "whole_article_tokens": 81,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_390",
+    "title": "민법 제390조(채무불이행과 손해배상)",
+    "source_characters": 114,
+    "source_text_sha256": "753be47a8eba48a68d39404c745df08d1eab6a195efe2d865eddeca78efa8c84",
+    "chunks": 1,
+    "whole_article_tokens": 100,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_393",
+    "title": "민법 제393조(손해배상의 범위)",
+    "source_characters": 112,
+    "source_text_sha256": "6abc09171da5ddac28fd6ebcb86a4600a511da10776664fb2616a21cef1c59d3",
+    "chunks": 1,
+    "whole_article_tokens": 93,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_396",
+    "title": "민법 제396조(과실상계)",
+    "source_characters": 77,
+    "source_text_sha256": "2da4b95e3fae264231acf180e2dcbcd9d35bf087e0fb2686044e70fdfbb6c633",
+    "chunks": 1,
+    "whole_article_tokens": 72,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_492",
+    "title": "민법 제492조(상계의 요건)",
+    "source_characters": 211,
+    "source_text_sha256": "e0a794d265ee017ff8089bad6a3be5fda9f8a4c518a8d83cbf5d6acdcf1139d9",
+    "chunks": 1,
+    "whole_article_tokens": 143,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_543",
+    "title": "민법 제543조(해지, 해제권)",
+    "source_characters": 120,
+    "source_text_sha256": "32830dee0150708e9e66c17be376324cd07daec6a122a2debedcc9ea78cb9f1a",
+    "chunks": 1,
+    "whole_article_tokens": 96,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_544",
+    "title": "민법 제544조(이행지체와 해제)",
+    "source_characters": 153,
+    "source_text_sha256": "8daab66d2208c7be7234fd3b0e7ba6fc367d33cb667cedcd5a7864f35ff26c54",
+    "chunks": 1,
+    "whole_article_tokens": 111,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_610",
+    "title": "민법 제610조(차주의 사용, 수익권)",
+    "source_characters": 158,
+    "source_text_sha256": "adaf136b5dc8cb77c04af21b04da59c4777b9f1f7ac9598bf023fa0e3ab3a307",
+    "chunks": 1,
+    "whole_article_tokens": 113,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_632",
+    "title": "민법 제632조(임차건물의 소부분을 타인에게 사용케 하는 경우)",
+    "source_characters": 89,
+    "source_text_sha256": "3fcacd53ff52225585c6907c4ca7858d421d194419e92b20400592d6a87ce95f",
+    "chunks": 1,
+    "whole_article_tokens": 84,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_635",
+    "title": "민법 제635조(기간의 약정없는 임대차의 해지통고)",
+    "source_characters": 207,
+    "source_text_sha256": "b07583bcc2b8a75693d9ab8a63c8d1e6f5c972b4c3fd8357c2206f755c8d9acb",
+    "chunks": 1,
+    "whole_article_tokens": 154,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_750",
+    "title": "민법 제750조(불법행위의 내용)",
+    "source_characters": 67,
+    "source_text_sha256": "cdf125767ab6640e07d557f6c73a0c53c1c6c4eebde9220474bd51756983bac8",
+    "chunks": 1,
+    "whole_article_tokens": 65,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_763",
+    "title": "민법 제763조(준용규정)",
+    "source_characters": 64,
+    "source_text_sha256": "78d8affa7151fde717dfadd18a03f3e41a51c0d3cf02d1dba7dc6c05b695d90e",
+    "chunks": 1,
+    "whole_article_tokens": 67,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_3_6",
+    "title": "주택임대차보호법 제3조의6(확정일자 부여 및 임대차 정보제공 등)",
+    "source_characters": 691,
+    "source_text_sha256": "03433c04d0ed9b80e1aa00965f3eb49a8b51df2536078a3959fa757c4587762b",
+    "chunks": 1,
+    "whole_article_tokens": 439,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_DECREE_8",
+    "title": "주택임대차보호법 시행령 제8조(차임 등 증액청구의 기준 등)",
+    "source_characters": 220,
+    "source_text_sha256": "774b57e5cb640ee5ffbf30abb1030c667ecb4d92e8ba578415f0ba303d08dac3",
+    "chunks": 1,
+    "whole_article_tokens": 172,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_DECREE_9",
+    "title": "주택임대차보호법 시행령 제9조(월차임 전환 시 산정률)",
+    "source_characters": 210,
+    "source_text_sha256": "1576c07054385d44d505e0b6b9970826735e011555b61c2a25f54ee6f791bc6d",
+    "chunks": 1,
+    "whole_article_tokens": 149,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_DECREE_10",
+    "title": "주택임대차보호법 시행령 제10조(보증금 중 일정액의 범위 등)",
+    "source_characters": 777,
+    "source_text_sha256": "4d6f373b7e01a472963fb9e01f2ef421c864de1aeb9f68cc59dcb043b35316bc",
+    "chunks": 1,
+    "whole_article_tokens": 466,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_DECREE_11",
+    "title": "주택임대차보호법 시행령 제11조(우선변제를 받을 임차인의 범위)",
+    "source_characters": 441,
+    "source_text_sha256": "42e5db2f553ca887db965cbe47339adf6f681f0857b0f4cf98bbe20b603473b2",
+    "chunks": 1,
+    "whole_article_tokens": 274,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_BROKER_25",
+    "title": "공인중개사법 제25조(중개대상물의 확인ㆍ설명)",
+    "source_characters": 934,
+    "source_text_sha256": "8cdbd944715e8a7770262cad7bbca19430cd90f00e1a706d4b1a3ec7576651f1",
+    "chunks": 1,
+    "whole_article_tokens": 506,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_BROKER_30",
+    "title": "공인중개사법 제30조(손해배상책임의 보장)",
+    "source_characters": 654,
+    "source_text_sha256": "0894781b6a9da40dd432965202371deef73afeba9d44aed448df9173d699645f",
+    "chunks": 1,
+    "whole_article_tokens": 374,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_BROKER_DECREE_21",
+    "title": "공인중개사법 시행령 제21조(중개대상물의 확인ㆍ설명)",
+    "source_characters": 1069,
+    "source_text_sha256": "846f54748af0ba06649e9c14970dbec35f36d2306875dfde6926ab098b8ce2b3",
+    "chunks": 4,
+    "whole_article_tokens": 651,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_2",
+    "title": "공동주택관리법 제2조(정의)",
+    "source_characters": 2029,
+    "source_text_sha256": "800adc32b42f6339f76f0eeff1e5b5e63de46c145eb31438449de23e6466b163",
+    "chunks": 4,
+    "whole_article_tokens": 1110,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_18",
+    "title": "공동주택관리법 제18조(관리규약)",
+    "source_characters": 500,
+    "source_text_sha256": "53e2e42a8045b2e2bf8110b4837cc84d1c2b15ff198c3f9e565d296be5ed8055",
+    "chunks": 1,
+    "whole_article_tokens": 293,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_20",
+    "title": "공동주택관리법 제20조(층간소음의 방지 등)",
+    "source_characters": 1870,
+    "source_text_sha256": "7d3909a2b893a33dc7a1938ba1a66866841a27d76005993c1b8f461117c2ab88",
+    "chunks": 11,
+    "whole_article_tokens": 1037,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_20_2",
+    "title": "공동주택관리법 제20조의2(간접흡연의 방지 등)",
+    "source_characters": 458,
+    "source_text_sha256": "aaa298e9de3dc780d827cb4fa749d342a3611dd68aa952f780b98204c2a151b7",
+    "chunks": 1,
+    "whole_article_tokens": 287,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_23",
+    "title": "공동주택관리법 제23조(관리비 등의 납부 및 공개 등)",
+    "source_characters": 1260,
+    "source_text_sha256": "bf1b86760446dc034291835d57216d58df832d4f5dd956ea7128f167c45fe491",
+    "chunks": 8,
+    "whole_article_tokens": 670,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_30",
+    "title": "공동주택관리법 제30조(장기수선충당금의 적립)",
+    "source_characters": 394,
+    "source_text_sha256": "6fa4633d3e7b174acc076d90ac5872c7c4b57facd1134ee8d1aaf0ec11f34084",
+    "chunks": 1,
+    "whole_article_tokens": 248,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_DECREE_19",
+    "title": "공동주택관리법 시행령 제19조(관리규약의 준칙)",
+    "source_characters": 3125,
+    "source_text_sha256": "ddd2f6d3c706530f5005af924fb72cf8003a68899d0a74fa5837dac7556d9c03",
+    "chunks": 6,
+    "whole_article_tokens": 1645,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_DECREE_23",
+    "title": "공동주택관리법 시행령 제23조(관리비 등)",
+    "source_characters": 2540,
+    "source_text_sha256": "fb2d6d507533e463ec98df0ac6511a5517e626f7775c67c63207789acc2bb6ba",
+    "chunks": 11,
+    "whole_article_tokens": 1383,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_APT_DECREE_31",
+    "title": "공동주택관리법 시행령 제31조(장기수선충당금의 적립 등)",
+    "source_characters": 1382,
+    "source_text_sha256": "582565788b0199b9de2957f4f3f3c3cd0ca66fb7e7b5f22b35d5271a60194d3c",
+    "chunks": 9,
+    "whole_article_tokens": 798,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TRUST_2",
+    "title": "신탁법 제2조(신탁의 정의)",
+    "source_characters": 273,
+    "source_text_sha256": "9a244274f5382f934702ac44dc96f97857537e3d7ddc742772f1c41efaffcf35",
+    "chunks": 1,
+    "whole_article_tokens": 185,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TRUST_4",
+    "title": "신탁법 제4조(신탁의 공시와 대항)",
+    "source_characters": 335,
+    "source_text_sha256": "7a0b631245053134ca089f30fc7048fde6db01b05bf79eb2c5e69450591a874d",
+    "chunks": 1,
+    "whole_article_tokens": 212,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TRUST_31",
+    "title": "신탁법 제31조(수탁자의 권한)",
+    "source_characters": 120,
+    "source_text_sha256": "9d5bdddfe8f1551bba639ca6a1747c5eb98ecbb88d61b780eadd99a33c73ecb0",
+    "chunks": 1,
+    "whole_article_tokens": 90,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_TRUST_42",
+    "title": "신탁법 제42조(신탁사무의 위임)",
+    "source_characters": 236,
+    "source_text_sha256": "a1bc697a64b6c2cfc3af2dccdfae6d324b7b5236597c38508267722ef1db9498",
+    "chunks": 1,
+    "whole_article_tokens": 160,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_REGISTRY_81",
+    "title": "부동산등기법 제81조(신탁등기의 등기사항)",
+    "source_characters": 1046,
+    "source_text_sha256": "6c909fd5ebba8517b6132080751ff07030d993ce521eab01564825deba72a3cd",
+    "chunks": 4,
+    "whole_article_tokens": 576,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CIVIL_PROCEDURE_29",
+    "title": "민사소송법 제29조(합의관할)",
+    "source_characters": 85,
+    "source_text_sha256": "cbe52949a87583a938507326bcf32c1b0f64d35354bce9a2df44372157e638fa",
+    "chunks": 1,
+    "whole_article_tokens": 79,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_FIRE_2",
+    "title": "실화책임에 관한 법률 제2조(적용범위)",
+    "source_characters": 69,
+    "source_text_sha256": "58a6fef74acb207df63d090c06b9c880c768b75f958ce78b6580f0b3112aa2b1",
+    "chunks": 1,
+    "whole_article_tokens": 74,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_FIRE_3",
+    "title": "실화책임에 관한 법률 제3조(손해배상액의 경감)",
+    "source_characters": 289,
+    "source_text_sha256": "25c40434259e012249eca331cfecde6b06d5ae21e43df08ade1846480e6f9e73",
+    "chunks": 1,
+    "whole_article_tokens": 192,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CONDO_5",
+    "title": "집합건물의 소유 및 관리에 관한 법률 제5조(구분소유자의 권리ㆍ의무 등)",
+    "source_characters": 451,
+    "source_text_sha256": "3455f2113400ddce355f005c2fe55e346f42d1a362ec9b68f1f30f252a5d2eb0",
+    "chunks": 1,
+    "whole_article_tokens": 290,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CONDO_17",
+    "title": "집합건물의 소유 및 관리에 관한 법률 제17조(공용부분의 부담ㆍ수익)",
+    "source_characters": 122,
+    "source_text_sha256": "be179f6da1a8c082884e75dfbb7d90afbed857312c14423732a75c61cf7aae28",
+    "chunks": 1,
+    "whole_article_tokens": 109,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CONDO_25",
+    "title": "집합건물의 소유 및 관리에 관한 법률 제25조(관리인의 권한과 의무)",
+    "source_characters": 423,
+    "source_text_sha256": "7df41758f90067acd57fd3939e881bed7bbfd9a06beb6b6b3eb675af792a7b59",
+    "chunks": 1,
+    "whole_article_tokens": 253,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_CONDO_42",
+    "title": "집합건물의 소유 및 관리에 관한 법률 제42조(규약 및 집회의 결의의 효력)",
+    "source_characters": 169,
+    "source_text_sha256": "b4ba6c946d5a64c83380d36c00360a3a6db4d68bf87710f22ce1d56a246602af",
+    "chunks": 1,
+    "whole_article_tokens": 136,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_DECREE_SUPP_33254_2",
+    "title": "주택임대차보호법 시행령 부칙(대통령령 제33254호) 제2조",
+    "source_characters": 130,
+    "source_text_sha256": "ca09bd0a8fdee7eb1dc32ef715ed0a23d5924678ca47b0b33badd1395007e879",
+    "chunks": 1,
+    "whole_article_tokens": 110,
+    "coverage_complete": true
+  },
+  {
+    "document_key": "LAW_HOUSING_DECREE_SUPP_31080_2",
+    "title": "주택임대차보호법 시행령 부칙(대통령령 제31080호) 제2조",
+    "source_characters": 128,
+    "source_text_sha256": "3543f41cc3ff2143648110c734119540d97a4b6e70d7d402e973854c72304161",
+    "chunks": 1,
+    "whole_article_tokens": 109,
+    "coverage_complete": true
+  }
+]
