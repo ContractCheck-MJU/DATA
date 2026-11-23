@@ -242,10 +242,10 @@ def run(input_file, output_dir, target=TARGET_TOKENS):
         "cross_reference_resolution": "not_performed; candidates recorded for review",
         "notes": ["512는 목표. 문맥 보존 때문에 넘는 단위는 검수 대상으로 남김.", "embedding_text에는 제목·문맥이 포함될 수 있으나 text는 원문 부분문자열만.", "같은 조문 항 참조 문맥은 후보이며 인용된 다른 법의 항인지 검수 필요.", "유형 매핑표는 정답 라벨로 사용하지 않음.", "DB BIGINT ID는 적재 시 생성. document_key는 내부 문자열키."]
     }
-    (outdir / "법령_chunks.jsonl").write_text("".join(json.dumps(c, ensure_ascii=False) + "\n" for c in chunks), encoding="utf-8")
-    (outdir / "법령_청킹검증.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
-    (outdir / "법령_문서별청킹통계.json").write_text(json.dumps(docstats, ensure_ascii=False, indent=2), encoding="utf-8")
-    with (outdir / "법령_청크검수.csv").open("w", encoding="utf-8-sig", newline="") as handle:
+    (outdir / "law_chunks.jsonl").write_text("".join(json.dumps(c, ensure_ascii=False) + "\n" for c in chunks), encoding="utf-8")
+    (outdir / "chunking_validation.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
+    (outdir / "chunk_stats_by_document.json").write_text(json.dumps(docstats, ensure_ascii=False, indent=2), encoding="utf-8")
+    with (outdir / "chunk_review.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(reviews[0]))
         writer.writeheader()
         writer.writerows(reviews)
@@ -254,15 +254,15 @@ def run(input_file, output_dir, target=TARGET_TOKENS):
         reading += ["=" * 50, c["chunk_key"], str(c["token_count"]) + " tokens / flags: " + ", ".join(c["review_flags"]), "[원문]", c["text"], "[별도 문맥 원문]"]
         reading += [item["text"] for item in c["context_spans"]]
         reading.append("")
-    (outdir / "법령_청킹검수.txt").write_text("\n".join(reading), encoding="utf-8-sig")
-    archive = outdir.parent / "법령_청킹결과.zip"
+    (outdir / "chunk_review.txt").write_text("\n".join(reading), encoding="utf-8-sig")
+    archive = outdir.parent / "chunking_output.zip"
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as package:
-        for name in ["법령_chunks.jsonl", "법령_청킹검증.json", "법령_문서별청킹통계.json", "법령_청크검수.csv", "법령_청킹검수.txt"]:
+        for name in ["law_chunks.jsonl", "chunking_validation.json", "chunk_stats_by_document.json", "chunk_review.csv", "chunk_review.txt"]:
             package.write(outdir / name, name)
     with zipfile.ZipFile(archive) as package:
         if package.testzip() is not None:
             raise ValueError("결과 ZIP 검증 실패")
-    if len((outdir / "법령_chunks.jsonl").read_text(encoding="utf-8").splitlines()) != len(chunks):
+    if len((outdir / "law_chunks.jsonl").read_text(encoding="utf-8").splitlines()) != len(chunks):
         raise ValueError("저장된 청크 수 불일치")
     print(json.dumps(audit, ensure_ascii=False, indent=2))
     print("결과 ZIP:", archive.resolve())

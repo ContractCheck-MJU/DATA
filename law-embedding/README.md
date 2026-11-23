@@ -15,32 +15,55 @@
 ```
 law-embedding/
 ├── README.md
+├── requirements.txt                  # 청킹·임베딩 재현용
+├── api/                              # 법령 검색 FastAPI (포트 8002)
+│   ├── app.py
+│   ├── requirements.txt
+│   └── README.md                     # 입출력 규격, DB 매핑, 메모리 메모
+├── tests/
+│   ├── conftest.py
+│   └── test_api.py                   # 모델 없이 도는 API 테스트 11개
+├── scripts/
+│   ├── 01_chunk_laws.py              # 원문 → 청크 생성 + 검증
+│   ├── 02_embed_laws.py              # 청크 → 벡터 생성 + 검색 + 검증
+│   ├── 03_apply_retrieval_fix.py     # 검색 보정 적용 + CLI 검색
+│   └── notebooks/
+│       ├── embedding_search_colab.ipynb   # Colab 재현·검색 테스트
+│       └── retrieval_eval_colab.ipynb     # Colab 검색 성능 평가
 ├── data/
-│   ├── 법령_임베딩.jsonl         # 핵심 산출물: 청크 메타데이터 + 1024차원 벡터 (165줄, 4.4MB)
-│   ├── 법령_벡터.npy             # 벡터만 분리 (float32, shape 165×1024)
-│   ├── 법령_벡터인덱스.jsonl      # npy의 행 번호 ↔ chunk_key 대응표
-│   ├── 법령_chunks.jsonl         # 임베딩 전 청킹 결과 (벡터 없음)
-│   └── 법령_원문95건.jsonl        # 청킹 입력이 된 법령 원문 95건
+│   ├── law_embeddings.jsonl          # 핵심 산출물: 청크 메타데이터 + 1024차원 벡터 (165줄)
+│   ├── law_vectors.npy               # 벡터만 분리 (float32, 165×1024)
+│   ├── law_vector_index.jsonl        # npy 행 번호 ↔ chunk_key 대응표
+│   ├── law_chunks.jsonl              # 임베딩 전 청킹 결과 (벡터 없음)
+│   └── law_sources_95.jsonl          # 청킹 입력이 된 법령 원문 95건
+├── evaluation/
+│   ├── retrieval_eval_report.md      # 평가·개선 보고서
+│   ├── retrieval_eval_summary.json   # 지표 요약
+│   ├── retrieval_eval_details.json   # 질의별 상위 결과
+│   ├── retrieval_eval_results.csv
+│   └── eval_queries_24.json          # 평가 질의 24개와 기대 근거
+├── retrieval_fix/
+│   ├── fix_center.npy                # 코퍼스 중심벡터
+│   ├── fix_components_2.npy          # 제거 대상 주성분 2개
+│   ├── law_vectors_fixed.npy         # 보정 적용된 문서 벡터
+│   ├── law_vectors_fixed_index.jsonl
+│   ├── fix_validation.json
+│   └── fix_per_query_results.csv     # 질의별 보정 전후 순위
 ├── validation/
-│   ├── 법령_임베딩검증.json       # 벡터 개수·차원·정규화·재현성 검증 결과
-│   ├── 법령_청킹검증.json         # 청킹 검증 결과 (원문 복원 일치 등)
-│   ├── 법령_문서별청킹통계.json    # 문서별 청크 수·토큰 수
-│   └── 법령_청크검수.csv          # 청크별 검토 표시 목록
-├── examples/
-│   ├── 법령_검색예시.csv          # 계약 문구 12개 × 상위 5개 검색 결과 (60행)
-│   └── 법령_검색예시.txt          # 같은 내용을 사람이 읽기 좋은 형태로
-└── code/
-    ├── 법령_청킹.py               # 원문 → 청크 생성 + 검증
-    ├── 법령_임베딩.py             # 청크 → 벡터 생성 + 검색 + 검증
-    ├── 법령_임베딩_검색_Colab.ipynb # Colab에서 재현·검색 테스트용 (출력 비움)
-    └── requirements.txt
+│   ├── embedding_validation.json     # 벡터 개수·차원·정규화·재현성
+│   ├── chunking_validation.json      # 청킹 검증 (원문 복원 일치 등)
+│   ├── chunk_stats_by_document.json
+│   └── chunk_review.csv              # 청크별 검토 표시 목록
+└── examples/
+    ├── search_examples.csv           # 계약 문구 12개 × 상위 5개 결과
+    └── search_examples.txt
 ```
 
-**백엔드에서 쓸 파일은 `data/법령_임베딩.jsonl` 하나면 됩니다.** 나머지는 재현·검증·참고용입니다.
+**백엔드에서 쓸 파일은 `data/law_embeddings.jsonl` 하나면 됩니다.** 나머지는 재현·검증·참고용입니다.
 
 ---
 
-## 2. `법령_임베딩.jsonl` 주요 필드
+## 2. `law_embeddings.jsonl` 주요 필드
 
 한 줄 = 청크 1개(JSON 1개). 주요 필드만 적습니다.
 
@@ -52,7 +75,7 @@ law-embedding/
 | `text` | **공식 원문 그대로의 부분 문자열** (사용자에게 보여줄 근거 원문) |
 | `embedding_text` | **실제 임베딩에 넣은 문자열** (법령명·조문 제목 등 문맥이 앞에 붙음) |
 | `embedding` | 1024개 float (L2 정규화 완료) |
-| `vector_row` | `법령_벡터.npy`의 행 번호 |
+| `vector_row` | `law_vectors.npy`의 행 번호 |
 | `law_name` / `article` / `article_title` | 법령명 / 조문 번호 / 조문 제목 |
 | `source_url` | 국가법령정보센터 공식 출처 |
 | `source_version_seq` / `source_effective_date` | 법령 버전 일련번호 / 시행일 |
@@ -79,7 +102,7 @@ from transformers import AutoModel, AutoTokenizer
 
 MODEL_ID, REV = "BAAI/bge-m3", "3069def033ce91d907258f9a830e442610dbfe0b"
 
-rows = [json.loads(l) for l in open("data/법령_임베딩.jsonl", encoding="utf-8") if l.strip()]
+rows = [json.loads(l) for l in open("data/law_embeddings.jsonl", encoding="utf-8") if l.strip()]
 vectors = np.array([r["embedding"] for r in rows], dtype=np.float32)   # (165, 1024)
 
 tok = AutoTokenizer.from_pretrained(MODEL_ID, revision=REV, use_fast=True)
@@ -109,7 +132,7 @@ search("월세를 한 번만 연체해도 즉시 계약을 해지한다.")
 
 ### 3-3. 재현
 
-`code/법령_임베딩_검색_Colab.ipynb`를 Colab에서 `런타임 → 모두 실행` 하면 모델을 내려받아 임베딩을 다시 만들고, 검색 입력칸으로 직접 테스트할 수 있습니다. GPU(T4) 기준 임베딩 생성에 약 37초 걸렸습니다. PC 설치나 유료 API 키는 필요 없습니다.
+`scripts/embedding_search_colab.ipynb`를 Colab에서 `런타임 → 모두 실행` 하면 모델을 내려받아 임베딩을 다시 만들고, 검색 입력칸으로 직접 테스트할 수 있습니다. GPU(T4) 기준 임베딩 생성에 약 37초 걸렸습니다. PC 설치나 유료 API 키는 필요 없습니다.
 
 ---
 
@@ -146,3 +169,42 @@ search("월세를 한 번만 연체해도 즉시 계약을 해지한다.")
 - ERD 설계대로 **분류 API와 법령 검색은 각각 호출**하는 구조를 전제로 했습니다. 이 데이터는 분류 모델의 학습 라벨이 아니라 **검색 근거 원문**입니다.
 - 사용자에게 보여줄 인용문은 `text`, 출처 링크는 `source_url`, 조문 표기는 `law_name` + `article`을 쓰면 됩니다.
 - 검색 API가 필요하면 위 3-1 코드를 그대로 감싸면 됩니다. 아직 API 서버는 만들지 않았습니다.
+---
+
+## 8. 검색 성능 평가와 보정 (2026-11-21 추가)
+
+평가 질의 24개로 측정하고, 문서 벡터만으로 계산한 후처리 보정을 적용했습니다. **재학습·재임베딩은 하지 않았습니다.**
+
+| 지표 | 보정 전 | 보정 후 |
+|---|---|---|
+| Hit@1 | 62.5% | 70.8% |
+| Hit@3 | 70.8% | 83.3% |
+| MRR@3 | 0.667 | 0.764 |
+
+대체 근거까지 정답으로 인정하면 Hit@1 79.2% / Hit@3 91.7%입니다.
+
+- 보정 방법: 코퍼스 평균 벡터 제거(중심화) + 상위 주성분 2개 제거 + 재정규화
+- 보정값은 **문서 벡터만으로 계산**했고 정답 라벨을 쓰지 않았습니다.
+- 로컬 구현과 `numpy.linalg.svd` 결과가 지표까지 일치했습니다.
+- 적용 코드: `scripts/03_apply_retrieval_fix.py`, 파라미터: `retrieval_fix/`
+- 자세한 내용과 남은 문제: `evaluation/retrieval_eval_report.md`
+
+**주의**: 기대 근거는 작성자가 지정한 것으로 법률 전문가 검수를 거치지 않았습니다. 주성분 제거 개수는 질의 24개 기준이라 질의가 늘면 재확인이 필요하고, 중심벡터는 현재 법령 165청크 기준이라 코퍼스가 바뀌면 다시 계산해야 합니다. 판례 벡터에는 적용하지 않았습니다.
+---
+
+## 9. 법령 검색 API (2026-11-21 추가)
+
+`api/` 폴더에 FastAPI 검색 서버를 추가했습니다. 판례 검색 API와 같은 구조이고, 백엔드가 분류·판례·법령을 각각 호출하는 구조를 전제로 합니다.
+
+```bash
+cd api && pip install -r requirements.txt
+python -m uvicorn app:app --host 127.0.0.1 --port 8002
+```
+
+- `POST /search/laws` : 계약 문구 → 관련 조문 상위 N개 (조문 중복 제거, 공식 출처 포함)
+- `POST /embed` : 1024차원 벡터 반환. **RAM 4GB 서버에서 판례 API와 모델을 공유**하기 위한 용도
+- `GET /health`, `GET /health/ready` : 로드 상태. 임베딩 미로드 시 검색은 503
+
+검색 보정은 기본 적용이며 요청에 `"apply_fix": false`로 끌 수 있습니다. 입출력 형식, DB 매핑 제안, 메모리 메모는 `api/README.md`를 보세요.
+
+**검증 상태**: 가짜 인코더 기반 테스트 11개 통과(스키마·중복 제거·입력 검증·보정 토글·503). 실제 모델을 올린 종단 실행은 아직 확인하지 않았습니다.

@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-11-21T13:33:11.614Z",
+  "method": "corpus mean centering + top-2 principal component removal (all-but-the-top)",
+  "fitted_on": "document vectors only (165 chunks); gold labels not used",
+  "remove_pc": 2,
+  "pc_variance_ratio_top2": 0.1854,
+  "deterministic_check": "power iteration (JS) vs numpy SVD (Colab) produced identical metrics",
+  "queries": 24,
+  "before": {
+    "hit@1": 0.625,
+    "hit@3": 0.7083,
+    "hit@5": 0.75,
+    "mrr@3": 0.6667,
+    "mrr@10": 0.69
+  },
+  "after": {
+    "hit@1": 0.7083,
+    "hit@3": 0.8333,
+    "hit@5": 0.875,
+    "mrr@3": 0.7639,
+    "mrr@10": 0.7789,
+    "miss": [
+      "Q02",
+      "Q06",
+      "Q15",
+      "Q20"
+    ]
+  },
+  "after_lenient": {
+    "hit@1": 0.7917,
+    "hit@3": 0.9167,
+    "hit@5": 0.9167,
+    "mrr@3": 0.8472,
+    "mrr@10": 0.8519,
+    "miss": [
+      "Q02",
+      "Q06"
+    ]
+  },
+  "rejected_alternatives": {
+    "bm25_only": {
+      "hit@1": 0.625,
+      "hit@3": 0.7083
+    },
+    "rrf_dense_bm25": {
+      "hit@1": 0.625,
+      "hit@3": 0.75
+    },
+    "rrf_centered_bm25": {
+      "hit@1": 0.6667,
+      "hit@3": 0.7083
+    },
+    "centering_only": {
+      "hit@1": 0.7083,
+      "hit@3": 0.75
+    },
+    "remove_pc_1": {
+      "hit@1": 0.6667,
+      "hit@3": 0.75
+    },
+    "remove_pc_3": {
+      "hit@1": 0.7083,
+      "hit@3": 0.7917
+    },
+    "mean_aggregation": {
+      "hit@1": 0.5833,
+      "hit@3": 0.75
+    },
+    "sum_aggregation": {
+      "hit@1": 0.0833,
+      "hit@3": 0.125
+    }
+  },
+  "queries_improved": 7,
+  "queries_worsened": 2,
+  "remaining_failures": [
+    "Q02",
+    "Q06",
+    "Q15",
+    "Q20"
+  ],
+  "caveats": [
+    "정답 조문은 작성자 지정 기대 근거이며 법률 전문가 검수를 거치지 않았다.",
+    "주성분 제거 개수(k=2)는 질의 24개 기준으로 고른 값이라 질의가 늘면 재확인이 필요하다.",
+    "중심벡터는 현재 법령 165청크로 계산했다. 코퍼스가 바뀌면 다시 계산해야 한다.",
+    "판례 벡터에는 적용하지 않았다.",
+    "점수는 코사인 유사도이며 위험확률이 아니다."
+  ],
+  "db_ingested": false,
+  "model_finetuned": false
+}
