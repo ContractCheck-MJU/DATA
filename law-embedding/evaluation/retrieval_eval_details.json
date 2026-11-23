@@ -1,0 +1,2388 @@
+{
+  "strict": [
+    {
+      "id": "Q01",
+      "query": "임차인은 계약 기간 중 발생하는 모든 수리비와 수선비를 부담한다.",
+      "issue": "수선의무 전가",
+      "gold": [
+        "LAW_CIVIL_623"
+      ],
+      "also": [
+        "LAW_CIVIL_626"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.603,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_623",
+          "law": "민법",
+          "article": "제623조",
+          "title": "임대인의 의무",
+          "score": 0.603
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.5997
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5931
+        },
+        {
+          "doc": "LAW_CIVIL_634",
+          "law": "민법",
+          "article": "제634조",
+          "title": "임차인의 통지의무",
+          "score": 0.5706
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5598
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "query": "임대인은 새로운 임차인이 구해진 후에 보증금을 반환한다.",
+      "issue": "보증금 반환 지연",
+      "gold": [
+        "LAW_CIVIL_536"
+      ],
+      "also": [
+        "LAW_HOUSING_4"
+      ],
+      "gold_rank": 58,
+      "gold_score": 0.4275,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6391
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6364
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6339
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.6289
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.624
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "query": "차임을 1회라도 연체하면 임대인은 즉시 계약을 해지할 수 있다.",
+      "issue": "연체 해지 기준",
+      "gold": [
+        "LAW_CIVIL_640"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7566,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_640",
+          "law": "민법",
+          "article": "제640조",
+          "title": "차임연체와 해지",
+          "score": 0.7566
+        },
+        {
+          "doc": "LAW_CIVIL_627",
+          "law": "민법",
+          "article": "제627조",
+          "title": "일부멸실 등과 감액청구, 해지권",
+          "score": 0.6525
+        },
+        {
+          "doc": "LAW_HOUSING_6_2",
+          "law": "주택임대차보호법",
+          "article": "제6조의2",
+          "title": "묵시적 갱신의 경우 계약의 해지",
+          "score": 0.6354
+        },
+        {
+          "doc": "LAW_CIVIL_635",
+          "law": "민법",
+          "article": "제635조",
+          "title": "기간의 약정없는 임대차의 해지통고",
+          "score": 0.6294
+        },
+        {
+          "doc": "LAW_CIVIL_544",
+          "law": "민법",
+          "article": "제544조",
+          "title": "이행지체와 해제",
+          "score": 0.606
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "query": "묵시적으로 갱신된 임대차를 임차인이 해지 통지하면 언제 효력이 생기나요?",
+      "issue": "묵시적 갱신 해지",
+      "gold": [
+        "LAW_HOUSING_6_2"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7815,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_2",
+          "law": "주택임대차보호법",
+          "article": "제6조의2",
+          "title": "묵시적 갱신의 경우 계약의 해지",
+          "score": 0.7815
+        },
+        {
+          "doc": "LAW_CIVIL_635",
+          "law": "민법",
+          "article": "제635조",
+          "title": "기간의 약정없는 임대차의 해지통고",
+          "score": 0.7096
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.7016
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6597
+        },
+        {
+          "doc": "LAW_HOUSING_4",
+          "law": "주택임대차보호법",
+          "article": "제4조",
+          "title": "임대차기간 등",
+          "score": 0.6103
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "query": "임대인은 필요하다고 판단하면 언제든지 차임을 인상할 수 있다.",
+      "issue": "차임 증액 제한",
+      "gold": [
+        "LAW_HOUSING_7"
+      ],
+      "also": [
+        "LAW_HOUSING_DECREE_8"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6584,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_7",
+          "law": "주택임대차보호법",
+          "article": "제7조",
+          "title": "차임 등의 증감청구권",
+          "score": 0.6584
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_8",
+          "law": "주택임대차보호법 시행령",
+          "article": "제8조",
+          "title": "차임 등 증액청구의 기준 등",
+          "score": 0.6503
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6497
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.6491
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6168
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "query": "임차인은 전입신고와 확정일자를 받지 않기로 한다.",
+      "issue": "대항력 포기",
+      "gold": [
+        "LAW_HOUSING_3"
+      ],
+      "also": [
+        "LAW_HOUSING_3_2",
+        "LAW_HOUSING_10"
+      ],
+      "gold_rank": 4,
+      "gold_score": 0.5453,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5854
+        },
+        {
+          "doc": "LAW_HOUSING_3_6",
+          "law": "주택임대차보호법",
+          "article": "제3조의6",
+          "title": "확정일자 부여 및 임대차 정보제공 등",
+          "score": 0.5694
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.5477
+        },
+        {
+          "doc": "LAW_HOUSING_3",
+          "law": "주택임대차보호법",
+          "article": "제3조",
+          "title": "대항력 등",
+          "score": 0.5453
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5393
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "query": "임차인은 퇴거할 때 도배와 장판을 새것으로 교체하여 원상복구한다.",
+      "issue": "원상회복 범위",
+      "gold": [
+        "LAW_CIVIL_615"
+      ],
+      "also": [
+        "LAW_CIVIL_654"
+      ],
+      "gold_rank": 7,
+      "gold_score": 0.5549,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6022
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5906
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5826
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5686
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.5613
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "query": "보증금의 일부를 월세로 전환할 때 적용되는 산정률 상한은 얼마인가요?",
+      "issue": "월차임 전환율",
+      "gold": [
+        "LAW_HOUSING_7_2"
+      ],
+      "also": [
+        "LAW_HOUSING_DECREE_9"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.739,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_7_2",
+          "law": "주택임대차보호법",
+          "article": "제7조의2",
+          "title": "월차임 전환 시 산정률의 제한",
+          "score": 0.739
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_10",
+          "law": "주택임대차보호법 시행령",
+          "article": "제10조",
+          "title": "보증금 중 일정액의 범위 등",
+          "score": 0.7153
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.6545
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.6408
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_SUPP_31080_2",
+          "law": "주택임대차보호법 시행령",
+          "article": "부칙(대통령령 제31080호) 제2조",
+          "title": "월차임 전환 시 산정률의 제한에 관한 적용례",
+          "score": 0.6244
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "query": "소액임차인이 우선변제받을 수 있는 보증금 중 일정액의 범위가 궁금합니다.",
+      "issue": "최우선변제",
+      "gold": [
+        "LAW_HOUSING_DECREE_10"
+      ],
+      "also": [
+        "LAW_HOUSING_8",
+        "LAW_HOUSING_DECREE_11"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.8048,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_DECREE_10",
+          "law": "주택임대차보호법 시행령",
+          "article": "제10조",
+          "title": "보증금 중 일정액의 범위 등",
+          "score": 0.8048
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.7903
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.7625
+        },
+        {
+          "doc": "LAW_HOUSING_7_2",
+          "law": "주택임대차보호법",
+          "article": "제7조의2",
+          "title": "월차임 전환 시 산정률의 제한",
+          "score": 0.666
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6597
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "query": "보증금을 돌려받지 못한 채 이사해야 하는데 임차권등기명령을 신청하고 싶습니다.",
+      "issue": "임차권등기명령",
+      "gold": [
+        "LAW_HOUSING_3_3"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7559,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.7559
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6252
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5825
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.578
+        },
+        {
+          "doc": "LAW_HOUSING_7",
+          "law": "주택임대차보호법",
+          "article": "제7조",
+          "title": "차임 등의 증감청구권",
+          "score": 0.5735
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "query": "임차인이 장기수선충당금을 대신 납부했는데 돌려받을 수 있나요?",
+      "issue": "장기수선충당금 반환",
+      "gold": [
+        "LAW_APT_DECREE_31"
+      ],
+      "also": [
+        "LAW_APT_30"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.7317,
+      "top5": [
+        {
+          "doc": "LAW_APT_DECREE_31",
+          "law": "공동주택관리법 시행령",
+          "article": "제31조",
+          "title": "장기수선충당금의 적립 등",
+          "score": 0.7317
+        },
+        {
+          "doc": "LAW_APT_30",
+          "law": "공동주택관리법",
+          "article": "제30조",
+          "title": "장기수선충당금의 적립",
+          "score": 0.6756
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6264
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6004
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.5977
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "query": "임차인은 임대인의 동의 없이 전대할 수 없으며 위반하면 계약을 해지한다.",
+      "issue": "전대 제한",
+      "gold": [
+        "LAW_CIVIL_629"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.8299,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_629",
+          "law": "민법",
+          "article": "제629조",
+          "title": "임차권의 양도, 전대의 제한",
+          "score": 0.8299
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6573
+        },
+        {
+          "doc": "LAW_CIVIL_634",
+          "law": "민법",
+          "article": "제634조",
+          "title": "임차인의 통지의무",
+          "score": 0.6393
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.6344
+        },
+        {
+          "doc": "LAW_HOUSING_6_2",
+          "law": "주택임대차보호법",
+          "article": "제6조의2",
+          "title": "묵시적 갱신의 경우 계약의 해지",
+          "score": 0.6322
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "query": "집주인이 자신이 직접 거주하겠다며 계약갱신 요구를 거절했습니다.",
+      "issue": "갱신거절 사유",
+      "gold": [
+        "LAW_HOUSING_6_3"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.5448,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5448
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.5226
+        },
+        {
+          "doc": "LAW_CIVIL_130",
+          "law": "민법",
+          "article": "제130조",
+          "title": "무권대리",
+          "score": 0.4586
+        },
+        {
+          "doc": "LAW_HOUSING_4",
+          "law": "주택임대차보호법",
+          "article": "제4조",
+          "title": "임대차기간 등",
+          "score": 0.4533
+        },
+        {
+          "doc": "LAW_HOUSING_3",
+          "law": "주택임대차보호법",
+          "article": "제3조",
+          "title": "대항력 등",
+          "score": 0.4498
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "query": "이 계약에 관한 소송은 임대인 주소지 법원을 관할로 한다.",
+      "issue": "관할 합의",
+      "gold": [
+        "LAW_CIVIL_PROCEDURE_29"
+      ],
+      "also": [
+        "LAW_TERMS_14"
+      ],
+      "gold_rank": 2,
+      "gold_score": 0.5627,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5888
+        },
+        {
+          "doc": "LAW_CIVIL_PROCEDURE_29",
+          "law": "민사소송법",
+          "article": "제29조",
+          "title": "합의관할",
+          "score": 0.5627
+        },
+        {
+          "doc": "LAW_HOUSING_3_7",
+          "law": "주택임대차보호법",
+          "article": "제3조의7",
+          "title": "임대인의 정보 제시 의무",
+          "score": 0.5502
+        },
+        {
+          "doc": "LAW_HOUSING_2",
+          "law": "주택임대차보호법",
+          "article": "제2조",
+          "title": "적용 범위",
+          "score": 0.5401
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.5381
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "query": "임대인은 임대 목적물의 하자에 대하여 어떠한 책임도 지지 않는다.",
+      "issue": "면책조항",
+      "gold": [
+        "LAW_TERMS_7"
+      ],
+      "also": [
+        "LAW_CIVIL_623"
+      ],
+      "gold_rank": 43,
+      "gold_score": 0.3981,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_623",
+          "law": "민법",
+          "article": "제623조",
+          "title": "임대인의 의무",
+          "score": 0.569
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5145
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.513
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5106
+        },
+        {
+          "doc": "LAW_CIVIL_629",
+          "law": "민법",
+          "article": "제629조",
+          "title": "임차권의 양도, 전대의 제한",
+          "score": 0.505
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "query": "계약을 위반하면 임차인이 낸 보증금 전액을 위약금으로 몰취한다.",
+      "issue": "위약금 과다",
+      "gold": [
+        "LAW_CIVIL_398"
+      ],
+      "also": [
+        "LAW_TERMS_8"
+      ],
+      "gold_rank": 14,
+      "gold_score": 0.5115,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5987
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5645
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.5572
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5568
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.5551
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "query": "임차인에게 불리한 특약은 효력이 없다고 하는데 근거 조문이 무엇인가요?",
+      "issue": "강행규정",
+      "gold": [
+        "LAW_HOUSING_10"
+      ],
+      "also": [
+        "LAW_CIVIL_652"
+      ],
+      "gold_rank": 2,
+      "gold_score": 0.6666,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_652",
+          "law": "민법",
+          "article": "제652조",
+          "title": "강행규정",
+          "score": 0.6724
+        },
+        {
+          "doc": "LAW_HOUSING_10",
+          "law": "주택임대차보호법",
+          "article": "제10조",
+          "title": "강행규정",
+          "score": 0.6666
+        },
+        {
+          "doc": "LAW_HOUSING_3",
+          "law": "주택임대차보호법",
+          "article": "제3조",
+          "title": "대항력 등",
+          "score": 0.585
+        },
+        {
+          "doc": "LAW_TERMS_11",
+          "law": "약관의 규제에 관한 법률",
+          "article": "제11조",
+          "title": "고객의 권익 보호",
+          "score": 0.5706
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5703
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "query": "임대차 기간을 1년으로 정했는데 임차인이 2년을 주장할 수 있나요?",
+      "issue": "최단 존속기간",
+      "gold": [
+        "LAW_HOUSING_4"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7408,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_4",
+          "law": "주택임대차보호법",
+          "article": "제4조",
+          "title": "임대차기간 등",
+          "score": 0.7408
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6919
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.654
+        },
+        {
+          "doc": "LAW_APT_2",
+          "law": "공동주택관리법",
+          "article": "제2조",
+          "title": "정의",
+          "score": 0.5952
+        },
+        {
+          "doc": "LAW_HOUSING_7",
+          "law": "주택임대차보호법",
+          "article": "제7조",
+          "title": "차임 등의 증감청구권",
+          "score": 0.5947
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "query": "공인중개사가 중개 과정에서 건물의 권리관계를 설명해 주지 않았습니다.",
+      "issue": "중개사 확인설명",
+      "gold": [
+        "LAW_BROKER_25"
+      ],
+      "also": [
+        "LAW_BROKER_DECREE_21"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.5703,
+      "top5": [
+        {
+          "doc": "LAW_BROKER_25",
+          "law": "공인중개사법",
+          "article": "제25조",
+          "title": "중개대상물의 확인ㆍ설명",
+          "score": 0.5703
+        },
+        {
+          "doc": "LAW_BROKER_DECREE_21",
+          "law": "공인중개사법 시행령",
+          "article": "제21조",
+          "title": "중개대상물의 확인ㆍ설명",
+          "score": 0.5671
+        },
+        {
+          "doc": "LAW_BROKER_30",
+          "law": "공인중개사법",
+          "article": "제30조",
+          "title": "손해배상책임의 보장",
+          "score": 0.4771
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.445
+        },
+        {
+          "doc": "LAW_REGISTRY_81",
+          "law": "부동산등기법",
+          "article": "제81조",
+          "title": "신탁등기의 등기사항",
+          "score": 0.4358
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "query": "등기부상 소유자가 신탁회사인데 임대차계약은 누구와 체결해야 하나요?",
+      "issue": "신탁 부동산",
+      "gold": [
+        "LAW_TRUST_31"
+      ],
+      "also": [
+        "LAW_TRUST_4",
+        "LAW_REGISTRY_81"
+      ],
+      "gold_rank": 6,
+      "gold_score": 0.5851,
+      "top5": [
+        {
+          "doc": "LAW_REGISTRY_81",
+          "law": "부동산등기법",
+          "article": "제81조",
+          "title": "신탁등기의 등기사항",
+          "score": 0.6463
+        },
+        {
+          "doc": "LAW_TRUST_2",
+          "law": "신탁법",
+          "article": "제2조",
+          "title": "신탁의 정의",
+          "score": 0.6193
+        },
+        {
+          "doc": "LAW_TRUST_42",
+          "law": "신탁법",
+          "article": "제42조",
+          "title": "신탁사무의 위임",
+          "score": 0.6119
+        },
+        {
+          "doc": "LAW_HOUSING_30",
+          "law": "주택임대차보호법",
+          "article": "제30조",
+          "title": "주택임대차표준계약서 사용",
+          "score": 0.5969
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5909
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "query": "임대인이 보증금 반환을 지체해서 생긴 손해를 배상받을 수 있나요?",
+      "issue": "채무불이행 손해배상",
+      "gold": [
+        "LAW_CIVIL_390"
+      ],
+      "also": [
+        "LAW_CIVIL_393"
+      ],
+      "gold_rank": 12,
+      "gold_score": 0.5642,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6649
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6586
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.6216
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.6207
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.6167
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "query": "임차인의 과실로 불이 나 옆집까지 번졌을 때 배상액이 줄어들 수 있나요?",
+      "issue": "실화 책임",
+      "gold": [
+        "LAW_FIRE_3"
+      ],
+      "also": [
+        "LAW_FIRE_2"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6223,
+      "top5": [
+        {
+          "doc": "LAW_FIRE_3",
+          "law": "실화책임에 관한 법률",
+          "article": "제3조",
+          "title": "손해배상액의 경감",
+          "score": 0.6223
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5778
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.5725
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.5668
+        },
+        {
+          "doc": "LAW_CIVIL_627",
+          "law": "민법",
+          "article": "제627조",
+          "title": "일부멸실 등과 감액청구, 해지권",
+          "score": 0.5644
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "query": "관리비 항목별 내역을 공개하지 않고 임대인이 임의로 책정한다.",
+      "issue": "관리비 공개",
+      "gold": [
+        "LAW_APT_23"
+      ],
+      "also": [
+        "LAW_APT_DECREE_23"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6186,
+      "top5": [
+        {
+          "doc": "LAW_APT_23",
+          "law": "공동주택관리법",
+          "article": "제23조",
+          "title": "관리비 등의 납부 및 공개 등",
+          "score": 0.6186
+        },
+        {
+          "doc": "LAW_APT_DECREE_23",
+          "law": "공동주택관리법 시행령",
+          "article": "제23조",
+          "title": "관리비 등",
+          "score": 0.5865
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5332
+        },
+        {
+          "doc": "LAW_CIVIL_629",
+          "law": "민법",
+          "article": "제629조",
+          "title": "임차권의 양도, 전대의 제한",
+          "score": 0.5246
+        },
+        {
+          "doc": "LAW_CIVIL_632",
+          "law": "민법",
+          "article": "제632조",
+          "title": "임차건물의 소부분을 타인에게 사용케 하는 경우",
+          "score": 0.5141
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "query": "임대차계약을 맺기 전에 임대인이 선순위 보증금과 체납 세금 정보를 알려줘야 하나요?",
+      "issue": "임대인 정보 제시",
+      "gold": [
+        "LAW_HOUSING_3_7"
+      ],
+      "also": [
+        "LAW_HOUSING_3_6"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6916,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_7",
+          "law": "주택임대차보호법",
+          "article": "제3조의7",
+          "title": "임대인의 정보 제시 의무",
+          "score": 0.6916
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6237
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.6059
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.5949
+        },
+        {
+          "doc": "LAW_HOUSING_3_6",
+          "law": "주택임대차보호법",
+          "article": "제3조의6",
+          "title": "확정일자 부여 및 임대차 정보제공 등",
+          "score": 0.5741
+        }
+      ]
+    }
+  ],
+  "lenient": [
+    {
+      "id": "Q01",
+      "query": "임차인은 계약 기간 중 발생하는 모든 수리비와 수선비를 부담한다.",
+      "issue": "수선의무 전가",
+      "gold": [
+        "LAW_CIVIL_623"
+      ],
+      "also": [
+        "LAW_CIVIL_626"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.603,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_623",
+          "law": "민법",
+          "article": "제623조",
+          "title": "임대인의 의무",
+          "score": 0.603
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.5997
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5931
+        },
+        {
+          "doc": "LAW_CIVIL_634",
+          "law": "민법",
+          "article": "제634조",
+          "title": "임차인의 통지의무",
+          "score": 0.5706
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5598
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "query": "임대인은 새로운 임차인이 구해진 후에 보증금을 반환한다.",
+      "issue": "보증금 반환 지연",
+      "gold": [
+        "LAW_CIVIL_536"
+      ],
+      "also": [
+        "LAW_HOUSING_4"
+      ],
+      "gold_rank": 17,
+      "gold_score": 0.4275,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6391
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6364
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6339
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.6289
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.624
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "query": "차임을 1회라도 연체하면 임대인은 즉시 계약을 해지할 수 있다.",
+      "issue": "연체 해지 기준",
+      "gold": [
+        "LAW_CIVIL_640"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7566,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_640",
+          "law": "민법",
+          "article": "제640조",
+          "title": "차임연체와 해지",
+          "score": 0.7566
+        },
+        {
+          "doc": "LAW_CIVIL_627",
+          "law": "민법",
+          "article": "제627조",
+          "title": "일부멸실 등과 감액청구, 해지권",
+          "score": 0.6525
+        },
+        {
+          "doc": "LAW_HOUSING_6_2",
+          "law": "주택임대차보호법",
+          "article": "제6조의2",
+          "title": "묵시적 갱신의 경우 계약의 해지",
+          "score": 0.6354
+        },
+        {
+          "doc": "LAW_CIVIL_635",
+          "law": "민법",
+          "article": "제635조",
+          "title": "기간의 약정없는 임대차의 해지통고",
+          "score": 0.6294
+        },
+        {
+          "doc": "LAW_CIVIL_544",
+          "law": "민법",
+          "article": "제544조",
+          "title": "이행지체와 해제",
+          "score": 0.606
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "query": "묵시적으로 갱신된 임대차를 임차인이 해지 통지하면 언제 효력이 생기나요?",
+      "issue": "묵시적 갱신 해지",
+      "gold": [
+        "LAW_HOUSING_6_2"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7815,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_2",
+          "law": "주택임대차보호법",
+          "article": "제6조의2",
+          "title": "묵시적 갱신의 경우 계약의 해지",
+          "score": 0.7815
+        },
+        {
+          "doc": "LAW_CIVIL_635",
+          "law": "민법",
+          "article": "제635조",
+          "title": "기간의 약정없는 임대차의 해지통고",
+          "score": 0.7096
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.7016
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6597
+        },
+        {
+          "doc": "LAW_HOUSING_4",
+          "law": "주택임대차보호법",
+          "article": "제4조",
+          "title": "임대차기간 등",
+          "score": 0.6103
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "query": "임대인은 필요하다고 판단하면 언제든지 차임을 인상할 수 있다.",
+      "issue": "차임 증액 제한",
+      "gold": [
+        "LAW_HOUSING_7"
+      ],
+      "also": [
+        "LAW_HOUSING_DECREE_8"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6584,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_7",
+          "law": "주택임대차보호법",
+          "article": "제7조",
+          "title": "차임 등의 증감청구권",
+          "score": 0.6584
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_8",
+          "law": "주택임대차보호법 시행령",
+          "article": "제8조",
+          "title": "차임 등 증액청구의 기준 등",
+          "score": 0.6503
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6497
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.6491
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6168
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "query": "임차인은 전입신고와 확정일자를 받지 않기로 한다.",
+      "issue": "대항력 포기",
+      "gold": [
+        "LAW_HOUSING_3"
+      ],
+      "also": [
+        "LAW_HOUSING_3_2",
+        "LAW_HOUSING_10"
+      ],
+      "gold_rank": 4,
+      "gold_score": 0.5453,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5854
+        },
+        {
+          "doc": "LAW_HOUSING_3_6",
+          "law": "주택임대차보호법",
+          "article": "제3조의6",
+          "title": "확정일자 부여 및 임대차 정보제공 등",
+          "score": 0.5694
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.5477
+        },
+        {
+          "doc": "LAW_HOUSING_3",
+          "law": "주택임대차보호법",
+          "article": "제3조",
+          "title": "대항력 등",
+          "score": 0.5453
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5393
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "query": "임차인은 퇴거할 때 도배와 장판을 새것으로 교체하여 원상복구한다.",
+      "issue": "원상회복 범위",
+      "gold": [
+        "LAW_CIVIL_615"
+      ],
+      "also": [
+        "LAW_CIVIL_654"
+      ],
+      "gold_rank": 7,
+      "gold_score": 0.5549,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6022
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5906
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5826
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5686
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.5613
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "query": "보증금의 일부를 월세로 전환할 때 적용되는 산정률 상한은 얼마인가요?",
+      "issue": "월차임 전환율",
+      "gold": [
+        "LAW_HOUSING_7_2"
+      ],
+      "also": [
+        "LAW_HOUSING_DECREE_9"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.739,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_7_2",
+          "law": "주택임대차보호법",
+          "article": "제7조의2",
+          "title": "월차임 전환 시 산정률의 제한",
+          "score": 0.739
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_10",
+          "law": "주택임대차보호법 시행령",
+          "article": "제10조",
+          "title": "보증금 중 일정액의 범위 등",
+          "score": 0.7153
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.6545
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.6408
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_SUPP_31080_2",
+          "law": "주택임대차보호법 시행령",
+          "article": "부칙(대통령령 제31080호) 제2조",
+          "title": "월차임 전환 시 산정률의 제한에 관한 적용례",
+          "score": 0.6244
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "query": "소액임차인이 우선변제받을 수 있는 보증금 중 일정액의 범위가 궁금합니다.",
+      "issue": "최우선변제",
+      "gold": [
+        "LAW_HOUSING_DECREE_10"
+      ],
+      "also": [
+        "LAW_HOUSING_8",
+        "LAW_HOUSING_DECREE_11"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.8048,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_DECREE_10",
+          "law": "주택임대차보호법 시행령",
+          "article": "제10조",
+          "title": "보증금 중 일정액의 범위 등",
+          "score": 0.8048
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.7903
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.7625
+        },
+        {
+          "doc": "LAW_HOUSING_7_2",
+          "law": "주택임대차보호법",
+          "article": "제7조의2",
+          "title": "월차임 전환 시 산정률의 제한",
+          "score": 0.666
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6597
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "query": "보증금을 돌려받지 못한 채 이사해야 하는데 임차권등기명령을 신청하고 싶습니다.",
+      "issue": "임차권등기명령",
+      "gold": [
+        "LAW_HOUSING_3_3"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7559,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.7559
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6252
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5825
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.578
+        },
+        {
+          "doc": "LAW_HOUSING_7",
+          "law": "주택임대차보호법",
+          "article": "제7조",
+          "title": "차임 등의 증감청구권",
+          "score": 0.5735
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "query": "임차인이 장기수선충당금을 대신 납부했는데 돌려받을 수 있나요?",
+      "issue": "장기수선충당금 반환",
+      "gold": [
+        "LAW_APT_DECREE_31"
+      ],
+      "also": [
+        "LAW_APT_30"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.7317,
+      "top5": [
+        {
+          "doc": "LAW_APT_DECREE_31",
+          "law": "공동주택관리법 시행령",
+          "article": "제31조",
+          "title": "장기수선충당금의 적립 등",
+          "score": 0.7317
+        },
+        {
+          "doc": "LAW_APT_30",
+          "law": "공동주택관리법",
+          "article": "제30조",
+          "title": "장기수선충당금의 적립",
+          "score": 0.6756
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.6264
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6004
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.5977
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "query": "임차인은 임대인의 동의 없이 전대할 수 없으며 위반하면 계약을 해지한다.",
+      "issue": "전대 제한",
+      "gold": [
+        "LAW_CIVIL_629"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.8299,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_629",
+          "law": "민법",
+          "article": "제629조",
+          "title": "임차권의 양도, 전대의 제한",
+          "score": 0.8299
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6573
+        },
+        {
+          "doc": "LAW_CIVIL_634",
+          "law": "민법",
+          "article": "제634조",
+          "title": "임차인의 통지의무",
+          "score": 0.6393
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.6344
+        },
+        {
+          "doc": "LAW_HOUSING_6_2",
+          "law": "주택임대차보호법",
+          "article": "제6조의2",
+          "title": "묵시적 갱신의 경우 계약의 해지",
+          "score": 0.6322
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "query": "집주인이 자신이 직접 거주하겠다며 계약갱신 요구를 거절했습니다.",
+      "issue": "갱신거절 사유",
+      "gold": [
+        "LAW_HOUSING_6_3"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.5448,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5448
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.5226
+        },
+        {
+          "doc": "LAW_CIVIL_130",
+          "law": "민법",
+          "article": "제130조",
+          "title": "무권대리",
+          "score": 0.4586
+        },
+        {
+          "doc": "LAW_HOUSING_4",
+          "law": "주택임대차보호법",
+          "article": "제4조",
+          "title": "임대차기간 등",
+          "score": 0.4533
+        },
+        {
+          "doc": "LAW_HOUSING_3",
+          "law": "주택임대차보호법",
+          "article": "제3조",
+          "title": "대항력 등",
+          "score": 0.4498
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "query": "이 계약에 관한 소송은 임대인 주소지 법원을 관할로 한다.",
+      "issue": "관할 합의",
+      "gold": [
+        "LAW_CIVIL_PROCEDURE_29"
+      ],
+      "also": [
+        "LAW_TERMS_14"
+      ],
+      "gold_rank": 2,
+      "gold_score": 0.5627,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5888
+        },
+        {
+          "doc": "LAW_CIVIL_PROCEDURE_29",
+          "law": "민사소송법",
+          "article": "제29조",
+          "title": "합의관할",
+          "score": 0.5627
+        },
+        {
+          "doc": "LAW_HOUSING_3_7",
+          "law": "주택임대차보호법",
+          "article": "제3조의7",
+          "title": "임대인의 정보 제시 의무",
+          "score": 0.5502
+        },
+        {
+          "doc": "LAW_HOUSING_2",
+          "law": "주택임대차보호법",
+          "article": "제2조",
+          "title": "적용 범위",
+          "score": 0.5401
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.5381
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "query": "임대인은 임대 목적물의 하자에 대하여 어떠한 책임도 지지 않는다.",
+      "issue": "면책조항",
+      "gold": [
+        "LAW_TERMS_7"
+      ],
+      "also": [
+        "LAW_CIVIL_623"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.3981,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_623",
+          "law": "민법",
+          "article": "제623조",
+          "title": "임대인의 의무",
+          "score": 0.569
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5145
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.513
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5106
+        },
+        {
+          "doc": "LAW_CIVIL_629",
+          "law": "민법",
+          "article": "제629조",
+          "title": "임차권의 양도, 전대의 제한",
+          "score": 0.505
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "query": "계약을 위반하면 임차인이 낸 보증금 전액을 위약금으로 몰취한다.",
+      "issue": "위약금 과다",
+      "gold": [
+        "LAW_CIVIL_398"
+      ],
+      "also": [
+        "LAW_TERMS_8"
+      ],
+      "gold_rank": 14,
+      "gold_score": 0.5115,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5987
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.5645
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.5572
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5568
+        },
+        {
+          "doc": "LAW_CIVIL_626",
+          "law": "민법",
+          "article": "제626조",
+          "title": "임차인의 상환청구권",
+          "score": 0.5551
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "query": "임차인에게 불리한 특약은 효력이 없다고 하는데 근거 조문이 무엇인가요?",
+      "issue": "강행규정",
+      "gold": [
+        "LAW_HOUSING_10"
+      ],
+      "also": [
+        "LAW_CIVIL_652"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6666,
+      "top5": [
+        {
+          "doc": "LAW_CIVIL_652",
+          "law": "민법",
+          "article": "제652조",
+          "title": "강행규정",
+          "score": 0.6724
+        },
+        {
+          "doc": "LAW_HOUSING_10",
+          "law": "주택임대차보호법",
+          "article": "제10조",
+          "title": "강행규정",
+          "score": 0.6666
+        },
+        {
+          "doc": "LAW_HOUSING_3",
+          "law": "주택임대차보호법",
+          "article": "제3조",
+          "title": "대항력 등",
+          "score": 0.585
+        },
+        {
+          "doc": "LAW_TERMS_11",
+          "law": "약관의 규제에 관한 법률",
+          "article": "제11조",
+          "title": "고객의 권익 보호",
+          "score": 0.5706
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5703
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "query": "임대차 기간을 1년으로 정했는데 임차인이 2년을 주장할 수 있나요?",
+      "issue": "최단 존속기간",
+      "gold": [
+        "LAW_HOUSING_4"
+      ],
+      "also": [],
+      "gold_rank": 1,
+      "gold_score": 0.7408,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_4",
+          "law": "주택임대차보호법",
+          "article": "제4조",
+          "title": "임대차기간 등",
+          "score": 0.7408
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6919
+        },
+        {
+          "doc": "LAW_HOUSING_6",
+          "law": "주택임대차보호법",
+          "article": "제6조",
+          "title": "계약의 갱신",
+          "score": 0.654
+        },
+        {
+          "doc": "LAW_APT_2",
+          "law": "공동주택관리법",
+          "article": "제2조",
+          "title": "정의",
+          "score": 0.5952
+        },
+        {
+          "doc": "LAW_HOUSING_7",
+          "law": "주택임대차보호법",
+          "article": "제7조",
+          "title": "차임 등의 증감청구권",
+          "score": 0.5947
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "query": "공인중개사가 중개 과정에서 건물의 권리관계를 설명해 주지 않았습니다.",
+      "issue": "중개사 확인설명",
+      "gold": [
+        "LAW_BROKER_25"
+      ],
+      "also": [
+        "LAW_BROKER_DECREE_21"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.5703,
+      "top5": [
+        {
+          "doc": "LAW_BROKER_25",
+          "law": "공인중개사법",
+          "article": "제25조",
+          "title": "중개대상물의 확인ㆍ설명",
+          "score": 0.5703
+        },
+        {
+          "doc": "LAW_BROKER_DECREE_21",
+          "law": "공인중개사법 시행령",
+          "article": "제21조",
+          "title": "중개대상물의 확인ㆍ설명",
+          "score": 0.5671
+        },
+        {
+          "doc": "LAW_BROKER_30",
+          "law": "공인중개사법",
+          "article": "제30조",
+          "title": "손해배상책임의 보장",
+          "score": 0.4771
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.445
+        },
+        {
+          "doc": "LAW_REGISTRY_81",
+          "law": "부동산등기법",
+          "article": "제81조",
+          "title": "신탁등기의 등기사항",
+          "score": 0.4358
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "query": "등기부상 소유자가 신탁회사인데 임대차계약은 누구와 체결해야 하나요?",
+      "issue": "신탁 부동산",
+      "gold": [
+        "LAW_TRUST_31"
+      ],
+      "also": [
+        "LAW_TRUST_4",
+        "LAW_REGISTRY_81"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.5851,
+      "top5": [
+        {
+          "doc": "LAW_REGISTRY_81",
+          "law": "부동산등기법",
+          "article": "제81조",
+          "title": "신탁등기의 등기사항",
+          "score": 0.6463
+        },
+        {
+          "doc": "LAW_TRUST_2",
+          "law": "신탁법",
+          "article": "제2조",
+          "title": "신탁의 정의",
+          "score": 0.6193
+        },
+        {
+          "doc": "LAW_TRUST_42",
+          "law": "신탁법",
+          "article": "제42조",
+          "title": "신탁사무의 위임",
+          "score": 0.6119
+        },
+        {
+          "doc": "LAW_HOUSING_30",
+          "law": "주택임대차보호법",
+          "article": "제30조",
+          "title": "주택임대차표준계약서 사용",
+          "score": 0.5969
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5909
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "query": "임대인이 보증금 반환을 지체해서 생긴 손해를 배상받을 수 있나요?",
+      "issue": "채무불이행 손해배상",
+      "gold": [
+        "LAW_CIVIL_390"
+      ],
+      "also": [
+        "LAW_CIVIL_393"
+      ],
+      "gold_rank": 12,
+      "gold_score": 0.5642,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.6649
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6586
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.6216
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.6207
+        },
+        {
+          "doc": "LAW_HOUSING_10_2",
+          "law": "주택임대차보호법",
+          "article": "제10조의2",
+          "title": "초과 차임 등의 반환청구",
+          "score": 0.6167
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "query": "임차인의 과실로 불이 나 옆집까지 번졌을 때 배상액이 줄어들 수 있나요?",
+      "issue": "실화 책임",
+      "gold": [
+        "LAW_FIRE_3"
+      ],
+      "also": [
+        "LAW_FIRE_2"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6223,
+      "top5": [
+        {
+          "doc": "LAW_FIRE_3",
+          "law": "실화책임에 관한 법률",
+          "article": "제3조",
+          "title": "손해배상액의 경감",
+          "score": 0.6223
+        },
+        {
+          "doc": "LAW_HOUSING_6_3",
+          "law": "주택임대차보호법",
+          "article": "제6조의3",
+          "title": "계약갱신 요구 등",
+          "score": 0.5778
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.5725
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.5668
+        },
+        {
+          "doc": "LAW_CIVIL_627",
+          "law": "민법",
+          "article": "제627조",
+          "title": "일부멸실 등과 감액청구, 해지권",
+          "score": 0.5644
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "query": "관리비 항목별 내역을 공개하지 않고 임대인이 임의로 책정한다.",
+      "issue": "관리비 공개",
+      "gold": [
+        "LAW_APT_23"
+      ],
+      "also": [
+        "LAW_APT_DECREE_23"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6186,
+      "top5": [
+        {
+          "doc": "LAW_APT_23",
+          "law": "공동주택관리법",
+          "article": "제23조",
+          "title": "관리비 등의 납부 및 공개 등",
+          "score": 0.6186
+        },
+        {
+          "doc": "LAW_APT_DECREE_23",
+          "law": "공동주택관리법 시행령",
+          "article": "제23조",
+          "title": "관리비 등",
+          "score": 0.5865
+        },
+        {
+          "doc": "LAW_HOUSING_3_3",
+          "law": "주택임대차보호법",
+          "article": "제3조의3",
+          "title": "임차권등기명령",
+          "score": 0.5332
+        },
+        {
+          "doc": "LAW_CIVIL_629",
+          "law": "민법",
+          "article": "제629조",
+          "title": "임차권의 양도, 전대의 제한",
+          "score": 0.5246
+        },
+        {
+          "doc": "LAW_CIVIL_632",
+          "law": "민법",
+          "article": "제632조",
+          "title": "임차건물의 소부분을 타인에게 사용케 하는 경우",
+          "score": 0.5141
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "query": "임대차계약을 맺기 전에 임대인이 선순위 보증금과 체납 세금 정보를 알려줘야 하나요?",
+      "issue": "임대인 정보 제시",
+      "gold": [
+        "LAW_HOUSING_3_7"
+      ],
+      "also": [
+        "LAW_HOUSING_3_6"
+      ],
+      "gold_rank": 1,
+      "gold_score": 0.6916,
+      "top5": [
+        {
+          "doc": "LAW_HOUSING_3_7",
+          "law": "주택임대차보호법",
+          "article": "제3조의7",
+          "title": "임대인의 정보 제시 의무",
+          "score": 0.6916
+        },
+        {
+          "doc": "LAW_HOUSING_3_2",
+          "law": "주택임대차보호법",
+          "article": "제3조의2",
+          "title": "보증금의 회수",
+          "score": 0.6237
+        },
+        {
+          "doc": "LAW_HOUSING_8",
+          "law": "주택임대차보호법",
+          "article": "제8조",
+          "title": "보증금 중 일정액의 보호",
+          "score": 0.6059
+        },
+        {
+          "doc": "LAW_HOUSING_DECREE_11",
+          "law": "주택임대차보호법 시행령",
+          "article": "제11조",
+          "title": "우선변제를 받을 임차인의 범위",
+          "score": 0.5949
+        },
+        {
+          "doc": "LAW_HOUSING_3_6",
+          "law": "주택임대차보호법",
+          "article": "제3조의6",
+          "title": "확정일자 부여 및 임대차 정보제공 등",
+          "score": 0.5741
+        }
+      ]
+    }
+  ]
+}

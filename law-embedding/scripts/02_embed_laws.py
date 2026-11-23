@@ -123,36 +123,36 @@ def build(input_file, output_dir):
         raise ValueError("같은 입력 재인코딩 일관성 실패")
     outdir = Path(output_dir)
     outdir.mkdir(parents=True, exist_ok=True)
-    np.save(outdir / "법령_벡터.npy", vectors, allow_pickle=False)
+    np.save(outdir / "law_vectors.npy", vectors, allow_pickle=False)
     index = [{"vector_row": i, "chunk_key": c["chunk_key"], "document_key": c["document_key"], "law_name": c.get("law_name"), "article": c.get("article"), "source_version_seq": c.get("source_version_seq"), "source_url": c["source_url"]} for i, c in enumerate(chunks)]
-    (outdir / "법령_벡터인덱스.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in index), encoding="utf-8")
-    with (outdir / "법령_임베딩.jsonl").open("w", encoding="utf-8") as handle:
+    (outdir / "law_vector_index.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in index), encoding="utf-8")
+    with (outdir / "law_embeddings.jsonl").open("w", encoding="utf-8") as handle:
         for i, c in enumerate(chunks):
             r = dict(c)
             r.update({"vector_row": i, "embedding": vectors[i].tolist(), "embedding_status": "generated", "embedding_model": MODEL_ID, "embedding_model_revision": MODEL_REVISION, "embedding_pooling": "CLS_last_hidden_state", "embedding_normalized": True, "embedding_storage_dtype": "float32", "db_id": None, "db_document_id": None})
             handle.write(json.dumps(r, ensure_ascii=False) + "\n")
     results = [r for q in EXAMPLE_QUERIES for r in engine.search(q, 5)]
     columns = ["query", "rank", "score", "law_name", "article", "article_title", "source_effective_date", "source_url", "document_key", "chunk_key", "text", "review_flags"]
-    with (outdir / "법령_검색예시.csv").open("w", encoding="utf-8-sig", newline="") as handle:
+    with (outdir / "search_examples.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=columns)
         writer.writeheader()
         for r in results:
             writer.writerow({k: ";".join(r[k]) if k == "review_flags" else r[k] for k in columns})
-    (outdir / "법령_검색예시.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    (outdir / "search_examples.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
     readable = ["법령 의미검색 예시", "점수는 코사인 유사도이며 위험확률/법적 적합성 확률이 아닙니다.", "자동 검색 순위 예시이며 정답 검수/정확도 평가를 마친 결과가 아닙니다.", ""]
     for q in EXAMPLE_QUERIES:
         readable += ["=" * 60, "검색 문구: " + q]
         for r in [r for r in results if r["query"] == q]:
             readable += ["", str(r["rank"]) + ". " + str(r["law_name"]) + " " + str(r["article"]) + " / 유사도 " + format(r["score"], ".4f"), "출처: " + r["source_url"], r["text"]]
         readable.append("")
-    (outdir / "법령_검색예시.txt").write_text("\n".join(readable), encoding="utf-8-sig")
+    (outdir / "search_examples.txt").write_text("\n".join(readable), encoding="utf-8-sig")
     meta = {"created_at": datetime.now(timezone.utc).isoformat(), "source_chunks_sha256": hashlib.sha256(input_bytes).hexdigest(), "source_documents": 95, "vector_count": len(vectors), "vector_dimension": 1024, "vector_shape": list(vectors.shape), "vector_dtype": str(vectors.dtype), "finite_values": bool(np.isfinite(vectors).all()), "zero_vectors": int(np.sum(norms == 0)), "l2_norm_min": float(norms.min()), "l2_norm_max": float(norms.max()), "same_input_reencode_cosine": probe_score, "embedding_model": MODEL_ID, "revision": MODEL_REVISION, "pooling": "CLS_last_hidden_state", "normalized": True, "input_field": "embedding_text", "max_input_tokens": max(token_counts), "token_counts_match_chunk_audit": True, "device": str(engine.device), "model_dtype": str(engine.dtype), "transformers_version": importlib.metadata.version("transformers"), "torch_version": torch.__version__, "example_queries": len(EXAMPLE_QUERIES), "example_results": len(results), "search_score_semantics": "cosine similarity, not risk probability", "retrieval_relevance_human_validated": False, "legal_applicability_verified": False, "db_ingested": False, "elapsed_seconds": round(time.time() - t0, 2)}
-    (outdir / "법령_임베딩검증.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
-    loaded = np.load(outdir / "법령_벡터.npy", allow_pickle=False)
+    (outdir / "embedding_validation.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    loaded = np.load(outdir / "law_vectors.npy", allow_pickle=False)
     if not np.array_equal(loaded, vectors):
         raise ValueError("NPY 저장 재개방 검증 실패")
-    names = ["법령_벡터.npy", "법령_벡터인덱스.jsonl", "법령_임베딩.jsonl", "법령_검색예시.csv", "법령_검색예시.json", "법령_검색예시.txt", "법령_임베딩검증.json"]
-    archive = outdir.parent / "법령_임베딩결과.zip"
+    names = ["law_vectors.npy", "law_vector_index.jsonl", "law_embeddings.jsonl", "search_examples.csv", "search_examples.json", "search_examples.txt", "embedding_validation.json"]
+    archive = outdir.parent / "embedding_output.zip"
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as package:
         for name in names:
             package.write(outdir / name, name)
