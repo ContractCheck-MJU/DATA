@@ -1,0 +1,39 @@
+{
+  "dataset": "additional_case_paraphrase_v1",
+  "gold_status": "provisional_needs_team_review",
+  "n_cases": 16,
+  "n_chunks": 62,
+  "n_questions": 15,
+  "model": "BAAI/bge-m3",
+  "results": {
+    "baseline_max": {
+      "method": "baseline_max",
+      "n_questions": 15,
+      "hit_at_1": 0.9333333333333333,
+      "hit_at_3": 1.0,
+      "mrr_at_3": 0.9666666666666667,
+      "hit1_count": 14,
+      "hit3_count": 15
+    },
+    "center_pc0": {
+      "method": "center_pc0",
+      "n_questions": 15,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "hit1_count": 15,
+      "hit3_count": 15
+    }
+  },
+  "rank_changes": {
+    "improved": 1,
+    "worsened": 0,
+    "unchanged": 14
+  },
+  "caveats": [
+    "기존 보유 판례를 근거로 수동 작성한 신규 문항. 독립 외부 검증셋이 아님",
+    "판례 대표 정답은 법률 전문가 검증 전",
+    "높은 Hit@k 수치는 법률적 적합성이나 실서비스 정확도가 아님",
+    "API 및 기존 임베딩은 변경하지 않음"
+  ]
+}

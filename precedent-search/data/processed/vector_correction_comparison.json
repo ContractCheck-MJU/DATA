@@ -1,0 +1,65 @@
+{
+  "n_cases": 16,
+  "n_chunks": 62,
+  "n_questions": 20,
+  "model": "BAAI/bge-m3",
+  "methods": [
+    {
+      "method": "baseline_max",
+      "hit1_count": 17,
+      "hit3_count": 19,
+      "hit_at_1": 0.85,
+      "hit_at_3": 0.95,
+      "mrr_at_3": 0.9,
+      "T04_rank": 6,
+      "T04_top3": [
+        "2023다224327",
+        "2025도4777",
+        "2023다259743"
+      ]
+    },
+    {
+      "method": "center_pc0",
+      "hit1_count": 17,
+      "hit3_count": 20,
+      "hit_at_1": 0.85,
+      "hit_at_3": 1.0,
+      "mrr_at_3": 0.925,
+      "T04_rank": 2,
+      "T04_top3": [
+        "2025도4777",
+        "2009가합3360",
+        "2020가단5104753"
+      ]
+    },
+    {
+      "method": "center_pc1",
+      "hit1_count": 17,
+      "hit3_count": 20,
+      "hit_at_1": 0.85,
+      "hit_at_3": 1.0,
+      "mrr_at_3": 0.925,
+      "T04_rank": 2,
+      "T04_top3": [
+        "2025도4777",
+        "2009가합3360",
+        "97나3537"
+      ]
+    },
+    {
+      "method": "center_pc2",
+      "hit1_count": 17,
+      "hit3_count": 20,
+      "hit_at_1": 0.85,
+      "hit_at_3": 1.0,
+      "mrr_at_3": 0.9167,
+      "T04_rank": 3,
+      "T04_top3": [
+        "2025도4777",
+        "97나3537",
+        "2009가합3360"
+      ]
+    }
+  ],
+  "note": "내부 20개 질문. 실서비스 법률 정확도 아님. 우수한 점수만으로 자동 적용 금지."
+}
