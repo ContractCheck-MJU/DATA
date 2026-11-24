@@ -1,0 +1,6 @@
+contractcheck:
+  ai:
+    base-url: ${CONTRACTCHECK_AI_BASE_URL:http://127.0.0.1:8000}
+    connect-timeout-ms: 3000
+    response-timeout-ms: 30000
+    expected-model-version: cv_20261116_seed42/fold_1
