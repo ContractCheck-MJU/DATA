@@ -26,6 +26,10 @@ Windows CPU에서는 PyTorch 설치 경로가 너무 길어지지 않도록 짧�
 
 ## 백엔드 개발용 API
 
+**설치 위치를 먼저 선택한다.** 저장소에서 실행할 때는 위의 `risk-classification/` 설치 절차를 사용하고 아래에 표시한 fold 1 체크포인트를 배치한다. 모델 ZIP만 사용할 때는 압축을 풀고 `ContractCheck_Backend_Fold1/` 안에서 가상환경을 만든 뒤 `.\.venv\Scripts\python.exe -m pip install -r requirements.txt`로 설치한다. 두 환경 모두 아래 서버 실행 명령을 사용한다.
+
+[Spring Boot 연동 가이드](docs/BACKEND_API.md)에서 설치·호출 예시와 오류 처리를 확인한다. [Java 클라이언트 예제](spring-client/README.md)와 [팀 환경 연동 체크리스트](docs/INTEGRATION_CHECKLIST.md)로 개발 서버 연결을 점검할 수 있다.
+
 별도로 받은 `ContractCheck_Backend_Fold1.zip`에서 아래 **체크포인트 폴더 전체**를 꺼내 동일한 상대 경로에 둔다. 기존 전달용 ZIP만으로도 독립 실행할 수 있다. 체크포인트와 ZIP은 Git 추적 대상에서 제외된다.
 
 ```text
