@@ -57,7 +57,20 @@ def load_resources():
     from sentence_transformers import SentenceTransformer
 
     model = SentenceTransformer(model_name)
-    return rows, vectors, model, model_name
+    
+    # 문서 벡터의 평균을 계산해 코퍼스 중심화 적용
+    corpus_mean = vectors.astype(np.float64).mean(axis=0)
+    centered_vectors = vectors.astype(np.float64) - corpus_mean
+
+    # 중심화된 벡터를 다시 정규화
+    norms = np.linalg.norm(centered_vectors, axis=1, keepdims=True)
+    if np.any(norms < 1e-12):
+        raise ValueError("중심화 후 길이가 0인 문서 벡터가 있습니다.")
+
+    centered_vectors = centered_vectors / norms
+
+    return rows, centered_vectors, corpus_mean, model, model_name
+
 
 
 @app.get("/health")
@@ -75,12 +88,33 @@ def search_precedents(body: SearchRequest):
     if not query:
         raise HTTPException(status_code=422, detail="빈 검색어는 사용할 수 없습니다.")
     try:
-        rows, vectors, model, model_name = load_resources()
+        rows, vectors, corpus_mean, model, model_name = load_resources()
     except (OSError, KeyError, ValueError, FileNotFoundError) as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
-    query_vector = model.encode(query, normalize_embeddings=True, convert_to_numpy=True)
-    scores = vectors @ np.asarray(query_vector, dtype=np.float32)
+    
+    # 검색 질문에도 문서와 동일한 중심화 적용
+    query_vector = model.encode(
+        query,
+        normalize_embeddings=True,
+        convert_to_numpy=True
+    ).astype(np.float64)
+
+    query_vector = query_vector - corpus_mean
+
+    # 중심화된 질문 벡터 정규화
+    query_norm = np.linalg.norm(query_vector)
+    if query_norm < 1e-12:
+        raise HTTPException(
+            status_code=422,
+            detail="중심화 후 검색어 벡터 길이가 0입니다."
+        )
+
+    query_vector = query_vector / query_norm
+
+    # 코사인 유사도 계산
+    scores = vectors @ query_vector
+
 
     # Existing baseline: maximum chunk score per unique precedent (source_id).
     chosen = set()
@@ -113,7 +147,7 @@ def search_precedents(body: SearchRequest):
     return {
         "query": query,
         "model": model_name,
-        "ranking_method": "max_chunk_cosine_similarity",
+        "ranking_method": "corpus_centered_max_chunk_cosine_similarity",
         "score_note": "검색 유사도이며 법적 위험 확률이나 법률적 적합성 판정이 아닙니다.",
         "count": len(results),
         "results": results,
