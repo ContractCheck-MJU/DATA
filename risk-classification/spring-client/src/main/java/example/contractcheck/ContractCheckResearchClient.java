@@ -23,12 +23,14 @@ public class ContractCheckResearchClient {
     private static final ParameterizedTypeReference<Map<String, Object>> BODY = new ParameterizedTypeReference<>() {};
     private final RestClient client;
     private final String expectedVersion;
+    private final String apiKey;
 
     public ContractCheckResearchClient(
             @Value("${contractcheck.ai.base-url:http://127.0.0.1:8000}") String baseUrl,
             @Value("${contractcheck.ai.connect-timeout-ms:3000}") long connectMs,
             @Value("${contractcheck.ai.response-timeout-ms:30000}") long responseMs,
-            @Value("${contractcheck.ai.expected-model-version:cv_20261116_seed42/fold_1}") String expectedVersion) {
+            @Value("${contractcheck.ai.expected-model-version:cv_20261116_seed42/fold_1}") String expectedVersion,
+            @Value("${CONTRACTCHECK_INTERNAL_API_KEY:}") String apiKey) {
         URI base = URI.create(baseUrl);
         if (!("http".equals(base.getScheme()) || "https".equals(base.getScheme())) || base.getHost() == null
                 || base.getUserInfo() != null || base.getQuery() != null || base.getFragment() != null
@@ -36,11 +38,13 @@ public class ContractCheckResearchClient {
                 || expectedVersion == null || expectedVersion.isBlank()) {
             throw new IllegalArgumentException("Set an origin base URL and positive timeouts");
         }
-        HttpClient transport = HttpClient.newBuilder().connectTimeout(Duration.ofMillis(connectMs)).build();
+        HttpClient transport = HttpClient.newBuilder().version(HttpClient.Version.HTTP_1_1)
+                .connectTimeout(Duration.ofMillis(connectMs)).build();
         JdkClientHttpRequestFactory factory = new JdkClientHttpRequestFactory(transport);
         factory.setReadTimeout(Duration.ofMillis(responseMs));
         this.client = RestClient.builder().baseUrl(baseUrl).requestFactory(factory).build();
         this.expectedVersion = expectedVersion;
+        this.apiKey = apiKey;
     }
 
     public Ready ready() {
@@ -61,6 +65,7 @@ public class ContractCheckResearchClient {
         String id = clauseId.strip();
         try {
             Map<String, Object> body = client.post().uri("/dev/v1/legacy/clauses/classify")
+                    .header("X-Internal-Api-Key", apiKey)
                     .contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON)
                     .body(Map.of("clause_id", id, "text", text.strip())).retrieve().body(BODY);
             verifyResearchModel(body);

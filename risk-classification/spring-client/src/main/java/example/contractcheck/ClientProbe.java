@@ -33,7 +33,8 @@ public class ClientProbe {
         throw new IllegalArgumentException("Use self-test OR live http://127.0.0.1:8000");
     }
     private static void live(String url) {
-        ContractCheckResearchClient c = new ContractCheckResearchClient(url, 3000, 30000, VERSION);
+        ContractCheckResearchClient c = new ContractCheckResearchClient(url, 3000, 30000, VERSION,
+                System.getenv().getOrDefault("CONTRACTCHECK_INTERNAL_API_KEY", ""));
         require(c.ready().researchOnly(), "Missing research flag");
         var result = c.classify(ID, "개발 연동 확인용 입력입니다.");
         require(result.researchOnly() && result.clauseId().equals(ID), "Response identity mismatch");
@@ -63,7 +64,7 @@ public class ClientProbe {
         String url = "http://127.0.0.1:" + server.getAddress().getPort();
         List<String> passed = new ArrayList<>();
         try {
-            ContractCheckResearchClient c = new ContractCheckResearchClient(url, 1000, 1000, VERSION);
+            ContractCheckResearchClient c = new ContractCheckResearchClient(url, 1000, 1000, VERSION, "");
             require(c.classify(ID, "개발 확인").weakLabel() == 0, "Success DTO"); passed.add("success");
             expect(Failure.REQUEST_REJECTED, () -> c.classify(ID, " ")); passed.add("blank_local");
             body.set("{\"detail\":\"PRIVATE_FIXTURE\"}");
@@ -80,10 +81,10 @@ public class ClientProbe {
                 body.set(invalid); expect(Failure.INVALID_RESPONSE, () -> c.classify(ID, "개발 확인")); passed.add("invalid_response");
             }
             body.set(VALID); delay.set(350);
-            ContractCheckResearchClient impatient = new ContractCheckResearchClient(url, 1000, 50, VERSION);
+            ContractCheckResearchClient impatient = new ContractCheckResearchClient(url, 1000, 50, VERSION, "");
             expect(Failure.TIMEOUT, () -> impatient.classify(ID, "개발 확인")); passed.add("timeout");
         } finally { server.stop(0); executor.shutdownNow(); }
-        ContractCheckResearchClient offline = new ContractCheckResearchClient(url, 300, 300, VERSION);
+        ContractCheckResearchClient offline = new ContractCheckResearchClient(url, 300, 300, VERSION, "");
         expect(Failure.CONNECTION_OR_IO, () -> offline.classify(ID, "개발 확인")); passed.add("connection_failure");
         System.out.println("{\"status\":\"PASS\",\"self_checks\":" + passed.size()
                 + ",\"actual_contracts_used\":false,\"training_run\":false}");

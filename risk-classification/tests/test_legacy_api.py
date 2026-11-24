@@ -1,4 +1,6 @@
 """Exercise real checkpoint inference and the boundary with reviewed inference."""
+import os
+import secrets
 import unittest
 from unittest.mock import patch
 
@@ -11,9 +13,18 @@ DEV_ROUTE = '/dev/v1/legacy/clauses/classify'
 CHECKPOINT = RUN / 'fold_1/checkpoint'
 
 
+TEST_KEY = secrets.token_hex(24)
+HEADERS = {"X-Internal-Api-Key": TEST_KEY}
+
+def model_environment(settings):
+    # Preserve the offline model cache/device settings when Transformers is first imported.
+    base = {k: v for k, v in os.environ.items() if not k.startswith("CONTRACTCHECK_")}
+    return patch.dict(os.environ, base | settings, clear=True)
+
+
 class LegacyAPIConfigurationTests(unittest.TestCase):
     def test_disabled_defaults(self):
-        with patch.dict('os.environ', {}, clear=True), TestClient(create_app()) as client:
+        with model_environment({'CONTRACTCHECK_INTERNAL_API_KEY': TEST_KEY}), TestClient(create_app(), headers=HEADERS) as client:
             self.assertEqual(client.get('/health/live').status_code, 200)
             self.assertEqual(client.get('/health/ready').status_code, 503)
             self.assertEqual(client.get('/dev/v1/legacy/health/ready').status_code, 503)
@@ -22,13 +33,13 @@ class LegacyAPIConfigurationTests(unittest.TestCase):
             self.assertEqual(response.json()['detail']['code'], 'LEGACY_MODEL_DISABLED')
 
     def test_invalid_fold_fails_startup(self):
-        with patch.dict('os.environ', {'CONTRACTCHECK_LEGACY_FOLD': '6'}, clear=True):
+        with model_environment({'CONTRACTCHECK_LEGACY_FOLD': '6'}):
             with self.assertRaisesRegex(ValueError, 'CONTRACTCHECK_LEGACY_FOLD'):
                 with TestClient(create_app()):
                     self.fail('Invalid fold unexpectedly started')
 
     def test_legacy_checkpoint_rejected_by_reviewed_loader(self):
-        with patch.dict('os.environ', {'CONTRACTCHECK_MODEL_DIR': str(CHECKPOINT)}, clear=True):
+        with model_environment({'CONTRACTCHECK_MODEL_DIR': str(CHECKPOINT)}):
             with self.assertRaisesRegex(FileNotFoundError, 'inference_config.json'):
                 with TestClient(create_app()):
                     self.fail('Legacy artifact unexpectedly accepted as reviewed')
@@ -36,12 +47,37 @@ class LegacyAPIConfigurationTests(unittest.TestCase):
 
 @unittest.skipUnless((CHECKPOINT/'model.safetensors').is_file(), 'Local fold 1 artifact required')
 class RealLegacyAPITests(unittest.TestCase):
+    def test_demo_windows_cover_full_clause_and_match_single_window_scores(self):
+        from api.internal import STRIDE, window_scores
+        env = {"CONTRACTCHECK_INTERNAL_API_KEY": TEST_KEY, "CONTRACTCHECK_LEGACY_FOLD": "1",
+               "CONTRACTCHECK_BATCH_MODE": "research-demo"}
+        with model_environment(env), TestClient(create_app(), headers=HEADERS) as c:
+            predictor = c.app.state.legacy_predictor
+            tokenizer = predictor.tokenizer
+            text = "시설의 변경은 서면으로 합의한다. " * 47
+            ids = tokenizer(text, add_special_tokens=False)["input_ids"]
+            content = 192 - tokenizer.num_special_tokens_to_add(pair=False)
+            windows = []
+            for start in range(0, len(ids), content - STRIDE):
+                windows.append(tokenizer.build_inputs_with_special_tokens(ids[start:start + content]))
+                if start + content >= len(ids):
+                    break
+            self.assertGreater(len(windows), 1)
+            self.assertTrue(all(len(window) <= 192 for window in windows))
+            expected = max(window_scores(predictor, [w])[0] for w in windows)
+            response = c.post("/classify", json={"clauses":[{"id":"tail","text":text}]},
+                              headers={"X-ContractCheck-Mode":"research-only"})
+            self.assertEqual(response.status_code, 200)
+            item = response.json()["results"][0]
+            self.assertEqual(item["windows"],len(windows))
+            self.assertAlmostEqual(item["before_summary_model_score"],expected,places=5)
+
     def test_real_checkpoint_predictions_and_request_errors(self):
         # Public API documentation example, not a released dataset row.
         fixtures = [dict(sample_id='demo-1',text='사업자가 계약 내용을 일방적으로 변경할 수 있도록 규정함.',
                          predicted=1,model_score=.9959288239479065)]
-        env = {'CONTRACTCHECK_LEGACY_FOLD': '1', 'OMP_NUM_THREADS': '4', 'MKL_NUM_THREADS': '4'}
-        with patch.dict('os.environ', env, clear=True), TestClient(create_app()) as client:
+        env = {'CONTRACTCHECK_INTERNAL_API_KEY': TEST_KEY, 'CONTRACTCHECK_LEGACY_FOLD': '1', 'OMP_NUM_THREADS': '4', 'MKL_NUM_THREADS': '4'}
+        with model_environment(env), TestClient(create_app(), headers=HEADERS) as client:
             ready = client.get('/dev/v1/legacy/health/ready')
             self.assertEqual(ready.status_code, 200)
             self.assertEqual(ready.json()['fold'], 1)

@@ -2,6 +2,8 @@
 
 Java17 이상, Spring Framework6.1 이상(RestClient 사용)을 기준으로 한다. 팀의 Spring Boot/Java 버전을 먼저 확인한다. 현재 프로젝트 버전에 RestClient가 없다면 팀의 기존 HTTP 클라이언트로 같은 요청/응답 규약을 구현한다. 이 예제를 위해 전체 백엔드 버전을 변경할 필요는 없다.
 
+이 예제는 개발 단건 API용이다. 최신 서버와 호출자에 `CONTRACTCHECK_INTERNAL_API_KEY`를 주입한다. 실제 BE의 배치 호출은 [별도 명세](../docs/INTERNAL_BATCH_API.md)를 따른다.
+
 ## 팀 프로젝트에 적용
 
 1. `ContractCheckResearchClient.java`의 package를 팀 패키지로 맞춰 Spring component scan 범위에 둔다. `@Service` 단일 생성자가 환경 설정을 받는다.
