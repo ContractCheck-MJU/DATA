@@ -65,11 +65,11 @@ class LegacyPredictor:
         self.lock = Lock()
 
     def classify(self, request: LegacyRequest) -> LegacyResponse:
-        inputs = self.tokenizer(request.text, return_tensors='pt', truncation=False)
-        length = inputs['input_ids'].shape[1]
-        if length > self.max_length:
-            raise HTTPException(422, detail={'code': 'TOKEN_LIMIT_EXCEEDED', 'max_tokens': self.max_length})
         with self.lock, self.torch.inference_mode():
+            inputs = self.tokenizer(request.text, return_tensors='pt', truncation=False)
+            length = inputs['input_ids'].shape[1]
+            if length > self.max_length:
+                raise HTTPException(422, detail={'code': 'TOKEN_LIMIT_EXCEEDED', 'max_tokens': self.max_length})
             logits = self.model(**inputs).logits[0]
             label = int(logits.argmax().item())
             score = logits.softmax(dim=-1)[1].item()

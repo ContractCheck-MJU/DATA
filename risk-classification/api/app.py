@@ -1,13 +1,17 @@
 """Draft internal inference API. No trained model -> 503, never fallback to summaries."""
 import json
 import os
+import secrets
 from contextlib import asynccontextmanager
 from pathlib import Path
 from threading import Lock
 from typing import Literal
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from api.legacy import legacy_router, load_legacy_from_env
+from api.internal import router as internal_router, load_embedder
 
 
 class ClauseRequest(BaseModel):
@@ -65,16 +69,49 @@ class LocalPredictor:
 def create_app(predictor=None):
     @asynccontextmanager
     async def lifespan(app):
+        app.state.api_key = os.getenv("CONTRACTCHECK_INTERNAL_API_KEY", "")
+        app.state.demo = os.getenv("CONTRACTCHECK_BATCH_MODE", "off") == "research-demo"
+        if os.getenv("CONTRACTCHECK_BATCH_MODE", "off") not in {"off", "research-demo"}:
+            raise ValueError("Unknown CONTRACTCHECK_BATCH_MODE")
+        if app.state.demo and os.getenv("CONTRACTCHECK_LEGACY_FOLD") != "1":
+            raise ValueError("Batch demo requires the fold 1 checkpoint")
+        embedding = os.getenv("CONTRACTCHECK_EMBED_ENABLED", "0")
+        if embedding not in {"0", "1"}:
+            raise ValueError("CONTRACTCHECK_EMBED_ENABLED must be 0 or 1")
         app.state.predictor = predictor
         path = os.environ.get('CONTRACTCHECK_MODEL_DIR')
         if predictor is None and path:
             # A configured broken model fails startup instead of hiding deployment errors.
             app.state.predictor = LocalPredictor(Path(path))
         app.state.legacy_predictor = load_legacy_from_env()
+        app.state.embedder = load_embedder() if embedding == "1" else None
+        app.state.embed_request_lock = Lock()
         yield
 
     app = FastAPI(title='ContractCheck research inference (draft)', version='0.1.0', lifespan=lifespan)
     app.include_router(legacy_router)
+    app.include_router(internal_router)
+
+    @app.middleware("http")
+    async def protect_inference(request, call_next):
+        if request.method == "POST":
+            expected = request.app.state.api_key
+            if not expected.strip() or expected == "unset":
+                return JSONResponse({"detail": {"code": "INTERNAL_KEY_NOT_CONFIGURED"}}, status_code=503)
+            supplied = request.headers.getlist("x-internal-api-key")
+            if len(supplied) != 1 or not secrets.compare_digest(supplied[0].encode(), expected.encode()):
+                return JSONResponse({"detail": {"code": "UNAUTHORIZED"}}, status_code=401)
+            try:
+                return await call_next(request)
+            except Exception:
+                # Third-party tokenizer/model exception messages can contain request text.
+                return JSONResponse({"detail": {"code": "INFERENCE_FAILED"}}, status_code=500)
+        return await call_next(request)
+
+    @app.exception_handler(RequestValidationError)
+    async def invalid_input(request: Request, error: RequestValidationError):
+        # Validation details may include the rejected input, even for malformed JSON.
+        return JSONResponse({"detail": [{"type": e["type"]} for e in error.errors()]}, status_code=422)
 
     @app.get('/health/live')
     def live():

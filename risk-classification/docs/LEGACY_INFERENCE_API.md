@@ -8,7 +8,7 @@
 
 모델 경로는 `experiments/legacy_roberta/runs/cv_20261116_seed42/fold_<N>/checkpoint/`이다. 해당 폴더의 `model.safetensors`, `config.json`, 토크나이저 파일들과 `EXPLORATORY_ONLY.json`이 필요하다. 가중치는 Git 제외 파일이라 다른 PC에서는 체크포인트 폴더를 별도로 전달받아 같은 위치에 둔다. 서버가 시작할 때 로컬에서 한 번 로드하고 CPU에서 추론한다. 잘못된 fold 번호나 누락·불일치 체크포인트는 시작 오류로 처리한다.
 
-프로젝트 루트 PowerShell에서 실행한다. 새 환경에서의 의존성 설치는 `python -m pip install -r ml/requirements-lock-windows-py312.txt`를 참고한다.
+[내부 API 안내](INTERNAL_BATCH_API.md)에 따라 서버 및 호출 세션에 `CONTRACTCHECK_INTERNAL_API_KEY`를 설정한다. 프로젝트 루트 PowerShell에서 실행한다. 새 환경에서의 의존성 설치는 `python -m pip install -r ml/requirements-lock-windows-py312.txt`를 참고한다.
 
 ```powershell
 Remove-Item Env:CONTRACTCHECK_MODEL_DIR -ErrorAction SilentlyContinue
@@ -69,4 +69,4 @@ Invoke-RestMethod -Uri 'http://127.0.0.1:8000/dev/v1/legacy/clauses/classify' `
 
 `api/app.py`는 개발 라우터를 등록하고 시작 시 별도 모델 상태를 초기화한다. `api/legacy.py`는 체크포인트 검사, 토큰화, 추론 및 개발 응답을 담당한다. 공개 테스트 [test_legacy_api.py](../tests/test_legacy_api.py)는 별도 제공된 fold 1 체크포인트가 있으면 위 `demo-1` 예제 **한 건**의 약라벨과 클래스 1 점수를 대조한다. 응답 ID·버전·연구용 표시, 잘못된 입력의 422, 승인 모델 경로의 503도 확인한다. 가중치가 없는 환경에서는 실제 추론 테스트를 건너뛰고, 모델 비활성 상태와 잘못된 fold 설정 등은 별도로 검사한다.
 
-Spring Boot 쪽에서 개발 DTO와 HTTP 클라이언트를 구현하고, 개발 환경의 주소·접근 제어·타임아웃을 정한 뒤 동일 요청으로 통합 테스트한다. 서버를 서로 다른 호스트에 놓는 경우 서비스 주소와 방화벽 설정이 필요하다. 개발 API에는 인증이 구현돼 있지 않으므로 승인된 개발망에서 예제 텍스트로만 연동을 확인한다. 유효성 오류에 입력값이 포함될 수 있어 오류 본문을 그대로 로그에 남기지 않는다.
+Spring Boot 쪽에서 개발 DTO와 HTTP 클라이언트를 구현하고, 개발 환경의 주소·접근 제어·타임아웃을 정한 뒤 동일 요청으로 통합 테스트한다. 서버를 서로 다른 호스트에 놓는 경우 서비스 주소와 방화벽 설정이 필요하다. 개발 API의 POST는 내부 키 인증을 적용하며 승인된 개발망에서 더미 입력으로 확인한다. 유효성 오류에 입력값이 포함될 수 있어 오류 본문을 그대로 로그에 남기지 않는다.

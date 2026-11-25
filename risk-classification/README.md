@@ -26,11 +26,9 @@ Windows CPU에서는 PyTorch 설치 경로가 너무 길어지지 않도록 짧�
 
 ## 백엔드 개발용 API
 
-**설치 위치를 먼저 선택한다.** 저장소에서 실행할 때는 위의 `risk-classification/` 설치 절차를 사용하고 아래에 표시한 fold 1 체크포인트를 배치한다. 모델 ZIP만 사용할 때는 압축을 풀고 `ContractCheck_Backend_Fold1/` 안에서 가상환경을 만든 뒤 `.\.venv\Scripts\python.exe -m pip install -r requirements.txt`로 설치한다. 두 환경 모두 아래 서버 실행 명령을 사용한다.
+**이슈 #8 통합은 최신 DATA 체크아웃에서 시작한다.** [내부 배치 API 및 실행 구성](docs/INTERNAL_BATCH_API.md)에 따라 서버에서 분류만, PC에서 임베딩만 또는 두 모델을 함께 실행할 수 있다. 모든 추론 POST에는 환경변수에서 주입한 내부 키가 필요하다. 배치 분류는 명시적으로 허용한 시연에서만 사용한다.
 
-[Spring Boot 연동 가이드](docs/BACKEND_API.md)에서 설치·호출 예시와 오류 처리를 확인한다. [Java 클라이언트 예제](spring-client/README.md)와 [팀 환경 연동 체크리스트](docs/INTEGRATION_CHECKLIST.md)로 개발 서버 연결을 점검할 수 있다.
-
-별도로 받은 `ContractCheck_Backend_Fold1.zip`에서 아래 **체크포인트 폴더 전체**를 꺼내 동일한 상대 경로에 둔다. 기존 전달용 ZIP만으로도 독립 실행할 수 있다. 체크포인트와 ZIP은 Git 추적 대상에서 제외된다.
+기존 `ContractCheck_Backend_Fold1.zip`에서는 아래 체크포인트 폴더 전체를 가져온다. 최신 실행 코드는 이 저장소의 `risk-classification/`를 사용한다. 이전 ZIP에 든 서버 코드는 단건 연동 당시 버전이다. [단건 호출 안내](docs/BACKEND_API.md) · [Spring 예제](spring-client/README.md) · [연동 체크리스트](docs/INTEGRATION_CHECKLIST.md)
 
 ```text
 experiments/legacy_roberta/runs/cv_20261116_seed42/fold_1/checkpoint/
@@ -49,7 +47,7 @@ $env:CONTRACTCHECK_LEGACY_FOLD = '1'
 .\.venv\Scripts\python.exe -m uvicorn api.app:app --host 127.0.0.1 --port 8000
 ```
 
-Spring Boot에서 `GET /dev/v1/legacy/health/ready`와 `POST /dev/v1/legacy/clauses/classify`를 사용한다. 요청·응답, 오류 및 예시는 [API 명세](docs/LEGACY_INFERENCE_API.md)를 참고한다. 모델 점수는 약라벨 출력이며 운영 위험도 필드와 분리한다. 승인 모델 경로 `/v1/clauses/classify`는 별도이며 승인 모델 미설정 시 503을 반환한다.
+단건 연구용 예제에서는 `GET /dev/v1/legacy/health/ready`와 `POST /dev/v1/legacy/clauses/classify`를 사용한다. 요청·응답, 오류 및 예시는 [API 명세](docs/LEGACY_INFERENCE_API.md)를 참고한다. 모델 점수는 약라벨 출력이며 운영 위험도 필드와 분리한다. 승인 모델 경로 `/v1/clauses/classify`는 별도이며 승인 모델 미설정 시 503을 반환한다.
 
 ## 학습과 재현
 
